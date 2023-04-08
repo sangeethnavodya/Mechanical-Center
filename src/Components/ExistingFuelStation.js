@@ -9,7 +9,7 @@ function ExisitngFuelStation() {
             <td>{row.Name}</td>
             <td>{row.CompanyName}</td>
             <td>{row.Province}</td>
-            <td><button>Delete</button></td>
+            <td><button>Delete bb</button></td>
             <td><button>Update</button></td>
 
         </tr>
