@@ -3,8 +3,16 @@ import { useEffect, useState } from "react"
 import '../Components/ComponentCss/existingFuel.css'
 
 function ExisitngFuelStation() {
-    function handleDelete(event){
-              console.log(event)
+    function handleDelete(event) {
+        console.log(event)
+        axios.delete('http://localhost:4000/register/fuelStation/' + event.id).then(response => {
+            console.log(response.data);
+            // Handle success response
+        })
+            .catch(error => {
+                console.log(error);
+                // Handle error response
+            });
     }
     const [fuelStations, setfuelStations] = useState([])
     const tableRows = fuelStations.map((row, index) => (
@@ -14,7 +22,6 @@ function ExisitngFuelStation() {
             <td>{row.Province}</td>
             <td><button onClick={() => handleDelete(row)}>Delete</button></td>
             <td><button>Update</button></td>
-
         </tr>
     ));
 
