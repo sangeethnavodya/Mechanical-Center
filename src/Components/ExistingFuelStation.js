@@ -3,13 +3,16 @@ import { useEffect, useState } from "react"
 import '../Components/ComponentCss/existingFuel.css'
 
 function ExisitngFuelStation() {
+    function handleDelete(event){
+              console.log(event)
+    }
     const [fuelStations, setfuelStations] = useState([])
     const tableRows = fuelStations.map((row, index) => (
         <tr key={index}>
             <td>{row.Name}</td>
             <td>{row.CompanyName}</td>
             <td>{row.Province}</td>
-            <td><button>Delete bb</button></td>
+            <td><button onClick={() => handleDelete(row)}>Delete</button></td>
             <td><button>Update</button></td>
 
         </tr>
