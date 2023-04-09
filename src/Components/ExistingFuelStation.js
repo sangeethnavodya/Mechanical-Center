@@ -7,6 +7,7 @@ function ExisitngFuelStation() {
         console.log(event)
         axios.delete('http://localhost:4000/register/fuelStation/' + event.id).then(response => {
             console.log(response.data);
+            window.location.reload(false);
             // Handle success response
         })
             .catch(error => {
