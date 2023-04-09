@@ -12,6 +12,8 @@ function FuelStationAddForm() {
         CompanyName: "",
         Province: ""
     });
+    const [nameValue, setnameValue] = useState('')
+    const [CompanyNameValue,setCompanyNameValue]=useState('')
     const [existing, setexisting] = useState(false)
     const fuelStationAddFormRef = useRef(null);
 
@@ -19,6 +21,12 @@ function FuelStationAddForm() {
     function handleInputChange(e) {
         const name = e.target.name;
         const value = e.target.value;
+        if (name === 'Name') {
+            setnameValue(e.target.value)
+        }
+        if(name==='CompanyName'){
+            setCompanyNameValue(e.target.value)
+        }
 
         setFormData((prev) => {
             return { ...prev, [name]: value }
@@ -46,6 +54,9 @@ function FuelStationAddForm() {
                 console.log(error);
                 // Handle error response
             });
+        setnameValue('')
+        setCompanyNameValue('')
+
     }
     function handleExisting(event) {
         event.preventDefault()
@@ -60,11 +71,11 @@ function FuelStationAddForm() {
                 </div>
                 <div>
                     <label>Fuel Station Name</label>
-                    <input type="text" name='Name' onChange={handleInputChange} />
+                    <input type="text" name='Name' onChange={handleInputChange} value={nameValue} />
                 </div>
                 <div>
                     <label>Company Name</label>
-                    <input type="text" name='CompanyName' onChange={handleInputChange} />
+                    <input type="text" name='CompanyName' onChange={handleInputChange} value={CompanyNameValue} />
                 </div>
                 <label htmlFor="dropdown">Province</label>
                 <select id="dropdown" value={selectedOption} onChange={handleDropdownChange}>
