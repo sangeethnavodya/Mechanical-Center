@@ -21,12 +21,12 @@ function Login() {
     }
     function handleUser(event) {
         event.preventDefault();
-        if (selectedOption === 'User') {
+        if (selectedOption === 'Owner') {
             axios.post('http://localhost:4000/register/login', formData)
                 .then(response => {
                     console.log(response.data);
-                    if (response.data.message === 'userSucc')
-                        navigate('/userHome')
+                    if (response.data.message === 'owner')
+                        navigate('/ownerHome')
                 })
                 .catch(error => {
                     console.log(error);
@@ -73,8 +73,8 @@ function Login() {
                     <label>Admin</label>
                 </div>
                 <div>
-                    <input type="radio" onChange={handleRadioButton} value="User" checked={selectedOption === 'User'} />
-                    <label>User</label>
+                    <input type="radio" onChange={handleRadioButton} value="Owner" checked={selectedOption === 'Owner'} />
+                    <label>Owner</label>
                 </div>
                 <div>
                     <input type="radio" onChange={handleRadioButton} value="Customer" checked={selectedOption === 'Customer'} />

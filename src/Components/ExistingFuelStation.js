@@ -18,7 +18,6 @@ function ExisitngFuelStation() {
             });
     }
     function handleUpdate(event){
-        console.log(event)
         localStorage.setItem('myUpdatingId', event.id);
         navigate('/updateFuelStation')
     }
@@ -48,7 +47,7 @@ function ExisitngFuelStation() {
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Age</th>
+                        <th>Company Name</th>
                         <th>Location</th>
                         <th>Delete</th>
                         <th>Update</th>

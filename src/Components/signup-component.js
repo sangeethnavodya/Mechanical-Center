@@ -99,7 +99,7 @@ function Sign() {
                     </div>
                     <div>
                         <input type="radio" onChange={handleRadioButton} value="User" checked={selectedOption === 'User'} />
-                        <label>User</label>
+                        <label>Owner</label>
                     </div>
                     <div>
                         <input type="radio" onChange={handleRadioButton} value="Customer" checked={selectedOption === 'Customer'} />
