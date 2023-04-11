@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 function CreateShopForm() {
   const [title, settitle] = useState('')
   const [file, setfile] = useState('')
+  const navigate = useNavigate();
 
   const setTitle = (e) => {
     settitle(e.target.value);
@@ -23,7 +24,10 @@ function CreateShopForm() {
 
     try {
       const response = await axios.post('http://localhost:4000/shop/create', data);
-      console.log(response.massage);
+      console.log(response.data);
+      if(response.data==='success'){
+        navigate('/shopHome')
+      }
       // display success message or redirect to success page
     } catch (error) {
       console.log(error);

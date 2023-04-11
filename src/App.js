@@ -7,6 +7,7 @@ import AdminHomePage from './Screens/AdminHomePage';
 import UpdatingFuelStationPage from './Screens/UpdatingFuelStationPage';
 import OwnerHomePage from './Screens/OwnerHomePage'
 import CreateShopPage from './Screens/CreateShopPage';
+import ShopHomePage from './Screens/ShopHomePage'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/updateFuelStation' element={<UpdatingFuelStationPage/>}/>
         <Route path='/ownerHome' element={<OwnerHomePage/>}/>
         <Route path='/createShop' element={<CreateShopPage/>}/>
+        <Route path='/shopHome' element={<ShopHomePage/>}/>
       </Routes>
     </div>
 
