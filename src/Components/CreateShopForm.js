@@ -4,29 +4,26 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function CreateShopForm() {
-  const [formData, setFormData] = useState({});
-  const [file, setFile] = useState(null);
+  const [title, settitle] = useState('')
+  const [file, setfile] = useState('')
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
-  };
+  const setTitle = (e) => {
+    settitle(e.target.value);
+  }
+  
+  const setImgFile=(e)=>{
+    setfile(e.target.files[0])
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = new FormData();
-    for (let key in formData) {
-      data.append(key, formData[key]);
-    }
-    data.append('image', file);
+    data.append("photo",file)
+    data.append("title",title)
 
     try {
-      const response = await axios.post('/shop/create', data);
-      console.log(response.data);
+      const response = await axios.post('http://localhost:4000/shop/create', data);
+      console.log(response.massage);
       // display success message or redirect to success page
     } catch (error) {
       console.log(error);
@@ -43,10 +40,10 @@ function CreateShopForm() {
       <div className='form'>
         <div className='Email'>
           <label className='emaillabel'>Shop Name</label>
-          <input type="email" name="Email" className="FormControl" placeholder="Enter Name" onChange={handleChange} />
+          <input type="email" name="Email" className="FormControl" placeholder="Enter Name" onChange={setTitle} />
         </div>
         <label htmlFor="image" className='emaillabel' >Select an image:</label>
-        <input type="file" className='FormControl' onChange={handleFileChange} />
+        <input type="file" className='FormControl' onChange={setImgFile} />
         <button className='signup' onClick={handleSubmit}>Create Shop</button>
       </div>
     </form>
