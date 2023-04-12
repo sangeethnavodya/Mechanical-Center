@@ -89,7 +89,7 @@ function Sign() {
         <form className='main' onSubmit={handleSub} >
 
             <div className='topic'>
-                <h3>Sign UP</h3>
+                <h3 className='head'>Sign UP</h3>
             </div>
             <div className='form'>
                 <div className='radiobuttons'>

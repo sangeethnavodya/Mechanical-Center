@@ -67,17 +67,17 @@ function FuelStationAddForm() {
         <div>
             <form className='main'>
                 <div className='topic'>
-                    <h3>Fuel Station Adding Form</h3>
+                    <h3 className='head'>Fuel Station Adding Form</h3>
                 </div>
                 <div>
-                    <label>Fuel Station Name</label>
+                    <label className='labelHead'>Fuel Station Name</label>
                     <input type="text" name='Name' onChange={handleInputChange} value={nameValue} />
                 </div>
                 <div>
-                    <label>Company Name</label>
+                    <label className='labelHead'>Company Name</label>
                     <input type="text" name='CompanyName' onChange={handleInputChange} value={CompanyNameValue} />
                 </div>
-                <label htmlFor="dropdown">Province</label>
+                <label htmlFor="dropdown" className='labelHead'>Province</label>
                 <select id="dropdown" value={selectedOption} onChange={handleDropdownChange}>
                     <option value="">--Please choose an option--</option>
                     <option value="Western Province">Western Province</option>

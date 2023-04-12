@@ -7,7 +7,6 @@ export default class SignPage extends Component {
     render() {
         return (
             <div>
-            <Navbar/>
             <Login/>
             </div>
         )

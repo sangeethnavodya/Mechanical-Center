@@ -1,41 +1,43 @@
 import React, { useState } from 'react';
 import './ComponentCss/signup.css';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function CreateShopForm() {
-  const [title, settitle] = useState('')
-  const [file, setfile] = useState('')
+  const [image, setImage] = useState(null);
+  const [title, setTitle] = useState(null)
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
   const navigate = useNavigate();
-
-  const setTitle = (e) => {
-    settitle(e.target.value);
-  }
-  
-  const setImgFile=(e)=>{
-    setfile(e.target.files[0])
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const data = new FormData();
-    data.append("photo",file)
-    data.append("title",title)
-
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:4000/shop/create', data);
-      console.log(response.data);
-      if(response.data==='success'){
-        navigate('/shopHome')
-      }
-      // display success message or redirect to success page
+      const formData = new FormData();
+      formData.append('image', image);
+      formData.append('title', title)
+      await axios.post('http://localhost:4000/shop/create', formData);
+      navigate('/ownerHome')
+      setIsSuccess(true);
+
+      setErrorMessage('');
+
     } catch (error) {
-      console.log(error);
-      // display error message or handle error
+      setIsSuccess(false);
+      setErrorMessage(error.response.data.message || 'Error creating shop');
     }
-    console.log(data);
+    setIsLoading(false);
   };
 
+  const handleImageChange = (event) => {
+    setImage(event.target.files[0]);
+  };
+  const handleTitleChange = (event) => {
+    console.log(event.target.value)
+    setTitle(event.target.value)
+  }
   return (
     <form className='main'>
       <div className='topic'>
@@ -44,10 +46,10 @@ function CreateShopForm() {
       <div className='form'>
         <div className='Email'>
           <label className='emaillabel'>Shop Name</label>
-          <input type="email" name="Email" className="FormControl" placeholder="Enter Name" onChange={setTitle} />
+          <input type="email" name="Email" className="FormControl" placeholder="Enter Name" onChange={handleTitleChange} />
         </div>
         <label htmlFor="image" className='emaillabel' >Select an image:</label>
-        <input type="file" className='FormControl' onChange={setImgFile} />
+        <input type="file" className='FormControl' onChange={handleImageChange} />
         <button className='signup' onClick={handleSubmit}>Create Shop</button>
       </div>
     </form>

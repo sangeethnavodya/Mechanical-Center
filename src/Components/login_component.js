@@ -53,6 +53,9 @@ function Login() {
                 .then(response => {
                     console.log(response.data);
                     // Handle success response
+                    if(response.data.message==='Customer login successfully'){
+                        navigate('/customerHome')
+                       }
                 })
                 .catch(error => {
                     console.log(error);
@@ -65,7 +68,7 @@ function Login() {
     return (
         <form className='main'>
             <div className='topic'>
-                <h3>Sign In</h3>
+                <h3 className='head'>Sign In</h3>
             </div>
             <div className='form'>
                 <div>

@@ -1,0 +1,50 @@
+/* Styles for the main container */
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #05484b;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Styles for the table */
+  .tableMain {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid rgb(95, 103, 219);
+    margin-top: 20px;
+  }
+  
+  /* Styles for the table header */
+  .tableHead {
+    background-color: #333;
+    color: rgb(57, 138, 158);
+  }
+  
+  /* Styles for the table row */
+  .tableRow {
+    border: 1px solid #ddd;
+  }
+  
+  /* Styles for the table cells */
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Styles for even table rows */
+  tr:nth-child(even) {
+    background-color: rgb(71, 219, 245);
+  }
+  
+  /* Styles for odd table rows */
+  tr:nth-child(odd) {
+    background-color: rgb(71, 219, 245);
+  }
+  
+  /* Styles for hover effect on table rows */
+  tr:hover {
+    background-color: rgb(173, 211, 218);
+    cursor: pointer;
+  }
+  

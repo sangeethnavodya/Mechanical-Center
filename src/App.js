@@ -8,6 +8,8 @@ import UpdatingFuelStationPage from './Screens/UpdatingFuelStationPage';
 import OwnerHomePage from './Screens/OwnerHomePage'
 import CreateShopPage from './Screens/CreateShopPage';
 import ShopHomePage from './Screens/ShopHomePage'
+import CustomerHomePage from './Screens/CustomerHomePage';
+import CFuelStationPage from './Screens/CFuelStationPage';
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
         <Route path='/ownerHome' element={<OwnerHomePage/>}/>
         <Route path='/createShop' element={<CreateShopPage/>}/>
         <Route path='/shopHome' element={<ShopHomePage/>}/>
+        <Route path='/customerHome' element={<CustomerHomePage/>}/>
+        <Route path='/seeFuel'element={<CFuelStationPage/>}/>
       </Routes>
     </div>
 
