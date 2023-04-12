@@ -10,6 +10,8 @@ import CreateShopPage from './Screens/CreateShopPage';
 import ShopHomePage from './Screens/ShopHomePage'
 import CustomerHomePage from './Screens/CustomerHomePage';
 import CFuelStationPage from './Screens/CFuelStationPage';
+import ItemAddingPage from './Screens/ItemAddingPage';
+import ShopWithItemPage from './Screens/ShopWithItemPage';
 
 
 function App() {
@@ -25,6 +27,9 @@ function App() {
         <Route path='/shopHome' element={<ShopHomePage/>}/>
         <Route path='/customerHome' element={<CustomerHomePage/>}/>
         <Route path='/seeFuel'element={<CFuelStationPage/>}/>
+        <Route path='/itemAddingForm' element={<ItemAddingPage/>}/>
+        <Route path='/shopView' element={<ShopWithItemPage/>}/>
+
       </Routes>
     </div>
 
