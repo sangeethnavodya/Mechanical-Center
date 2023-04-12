@@ -12,6 +12,8 @@ import CustomerHomePage from './Screens/CustomerHomePage';
 import CFuelStationPage from './Screens/CFuelStationPage';
 import ItemAddingPage from './Screens/ItemAddingPage';
 import ShopWithItemPage from './Screens/ShopWithItemPage';
+import ShopHomePageCC from './Screens/ShopHomePageCC';
+import ShopWithItemPageCC from './Screens/ShopWithItemPageCC';
 
 
 function App() {
@@ -29,6 +31,9 @@ function App() {
         <Route path='/seeFuel'element={<CFuelStationPage/>}/>
         <Route path='/itemAddingForm' element={<ItemAddingPage/>}/>
         <Route path='/shopView' element={<ShopWithItemPage/>}/>
+        <Route path='/seeShops' element={<ShopHomePageCC/>}/>
+        <Route path='/shopViewCC' element={<ShopWithItemPageCC/>}/>
+
 
       </Routes>
     </div>
