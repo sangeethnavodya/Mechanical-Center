@@ -1,10 +1,24 @@
 import axios from "axios"
+import jsPDF from "jspdf";
 import { useEffect, useState } from "react"
 import { Navigate, useNavigate } from "react-router-dom";
 import '../Components/ComponentCss/existingFuelCC.css'
 
 function ExisitngFuelStationCC() {
     const navigate = useNavigate();
+
+    const generatePDF = () => {
+        var doc=new jsPDF("p","pt","a4");
+        doc.html(document.querySelector("#tablePDF"),{
+        callback:function(pdf)
+        {
+            pdf.save("mypdf.pdf");
+
+        }
+    }
+        )
+    }
+
     function handleDelete(event) {
         console.log(event)
         axios.delete('http://localhost:4000/register/fuelStation/' + event.id).then(response => {
@@ -17,7 +31,7 @@ function ExisitngFuelStationCC() {
                 // Handle error response
             });
     }
-    function handleUpdate(event){
+    function handleUpdate(event) {
         localStorage.setItem('myUpdatingId', event.id);
         navigate('/updateFuelStation')
     }
@@ -42,8 +56,9 @@ function ExisitngFuelStationCC() {
     }, [])
     return (
         <div className="main">
-            <table className="tableMain">
-                <thead  className="tableHead">
+            <div id="tablePDF">
+            <table className="tableMain" id="pdfTable">
+                <thead className="tableHead">
                     <tr className="tableRow">
                         <th>Name</th>
                         <th>Company Name</th>
@@ -54,6 +69,9 @@ function ExisitngFuelStationCC() {
                     {tableRows}
                 </tbody>
             </table>
+            </div>
+            <button onClick={generatePDF}>Download Report</button>
+
         </div>
     )
 

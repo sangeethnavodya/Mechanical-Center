@@ -1,0 +1,17 @@
+.button-shop {
+    padding: 10px 20px;
+    background-color: #e3e5e7;
+    color: rgb(10, 9, 9);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .button-shop:hover {
+    background-color: #0062cc;
+    transform: translateY(-2px);
+    color: aliceblue;
+  }
+  

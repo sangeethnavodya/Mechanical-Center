@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import '../Components/ComponentCss/existingShop.css'
 
 const ShopList = () => {
   const [shops, setShops] = useState([]);
@@ -51,8 +52,8 @@ const ShopList = () => {
         <img src={row.image.url} alt="product" width="100" height="100" />
       </td>
       <td>{row.title}</td>
-      <td><button onClick={() => handleOnclick(row)}>Add item to shop</button></td>
-      <td><button onClick={() => handleOnclickShop(row)}>Show shop</button></td>
+      <td><button className='button-shop' onClick={() => handleOnclick(row)}>Add item to shop</button></td>
+      <td><button  className='button-shop' onClick={() => handleOnclickShop(row)}>Show shop</button></td>
 
     </tr>
   ));

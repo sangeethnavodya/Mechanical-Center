@@ -5,22 +5,33 @@ import './ComponentCss/ShopList.css'; // import CSS file
 
 const ShowExistingItem = () => {
     const [items, setItems] = useState([]);
+    const [shops, setShop] = useState()
+    const [title, setTitle] = useState()
     const navigate = useNavigate();
     const formData = new FormData();
     formData.append('shop_id', localStorage.getItem('shop_id'));
     useEffect(() => {
         // Fetch shop data from API on component mount
-        axios.post('http://localhost:4000/item/shopWise', formData)
-            .then((response) => {
-                if (response){
-                    console.log(response.data.users)
-                setItems(response.data.users)
-                
-                }
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+        const fetchData = async () => {
+            axios.post('http://localhost:4000/item/shopWise', formData)
+                .then((response) => {
+                    if (response) {
+                        console.log(response.data)
+                        setItems(response.data.users)
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+
+            axios.get('http://localhost:4000/shop/findOne/' + localStorage.getItem('shop_id'))
+                .then((response) => {
+                    console.log(response.data)
+                    setShop(response.data.image.url)
+                    setTitle(response.data.title)
+                })
+        }
+        fetchData()
     }, []);
     const cardViews = items.map((shop, index) => (
         <div className="card" key={index}>
@@ -33,8 +44,17 @@ const ShowExistingItem = () => {
         </div>
     ));
     return (
-        <div className="item-grid"> {/* wrap cardViews in a container */}
-            {cardViews}
+        
+        <div>
+            <div className='iconLogo' style={{ display: 'flex', alignItems: 'center' }}>
+                <img src={shops} alt="shop" className="item-img-logo" style={{width:"100px"}} />
+                <h1 className='shop_name'>{title}</h1>
+            </div>
+
+
+            <div className="item-grid"> {/* wrap cardViews in a container */}
+                {cardViews}
+            </div>
         </div>
     );
 };

@@ -51,7 +51,7 @@ function ItemShopForm() {
     return (
         <form className='main'>
             <div className='topic'>
-                <h3>Add Item To Your Shop</h3>
+                <h3 className='create-shop-title'>Add Item To Your Shop</h3>
             </div>
             <div className='form'>
                 <div className='Email'>
