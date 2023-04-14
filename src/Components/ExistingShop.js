@@ -47,25 +47,25 @@ const ShopList = () => {
   }
 
   const tableRows = shops.map((row, index) => (
-    <tr key={index}>
-      <td>
+    <tr key={index} className='shop-table-rows'>
+      <td className='table-shop-td'>
         <img src={row.image.url} alt="product" width="100" height="100" />
       </td>
-      <td>{row.title}</td>
-      <td><button className='button-shop' onClick={() => handleOnclick(row)}>Add item to shop</button></td>
-      <td><button  className='button-shop' onClick={() => handleOnclickShop(row)}>Show shop</button></td>
+      <td >{row.title}</td>
+      <td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclick(row)}>Add item to shop</button></td>
+      <td className='table-shop-td'><button  className='button-shop' onClick={() => handleOnclickShop(row)}>Show shop</button></td>
 
     </tr>
   ));
   console.log(shops)
   return (
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Logo</th>
-            <th>Shop Name</th>
-          </tr>
+    <div className='shop-main-div'>
+      <table className='shop-main-table' >
+        <thead className='shop-main-head'>
+          <tr className='shop-tr'>
+            <th className='shop-th'>Logo</th>
+            <th className='shop-th'>Shop Name</th>
+          </tr >
         </thead>
 
         <tbody>

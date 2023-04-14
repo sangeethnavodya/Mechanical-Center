@@ -1,17 +1,63 @@
+.shop-main-div {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.shop-main-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.shop-main-head {
+  background-color: #f7f7f7;
+  font-size: 18px;
+}
+
+.shop-tr {
+  border: none;
+}
+
+.shop-th,
+.shop-td {
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+
+.shop-th {
+  font-size: 18px;
+}
+
+.shop-td {
+  font-size: 16px;
+}
+
+.shop-table-rows:hover {
+  background-color: #f5f5f5;
+}
+
 .button-shop {
-    padding: 10px 20px;
-    background-color: #e3e5e7;
-    color: rgb(10, 9, 9);
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .button-shop:hover {
-    background-color: #0062cc;
-    transform: translateY(-2px);
-    color: aliceblue;
-  }
-  
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+
+.button-shop:hover {
+  background-color: #3e8e41;
+}
+
+.table-shop-td {
+  text-align: center;
+}
