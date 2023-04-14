@@ -44,6 +44,23 @@ const ShopListCC = () => {
       });
 
   }
+  function handleOnclickReview(e){
+    localStorage.setItem('shop_id', e._id);
+    const formData = new FormData();
+    formData.append('shop_id', localStorage.getItem('shop_id'));
+
+    // Fetch shop data from API on component mount
+    axios.post('http://localhost:4000/item/shopWise', formData)
+      .then((response) => {
+        if (response) {
+          if (response.data.message !== 'no users with the same name found'){}
+            navigate('/shopReview')
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   const tableRows = shops.map((row, index) => (
     <tr key={index}>
@@ -51,6 +68,7 @@ const ShopListCC = () => {
         <img src={row.image.url} alt="product" width="100" height="100" />
       </td>
       <td>{row.title}</td>
+      <td><button onClick={() => handleOnclickReview(row)}>Add A Review</button></td>
       <td><button onClick={() => handleOnclickShop(row)}>Show shop</button></td>
 
     </tr>

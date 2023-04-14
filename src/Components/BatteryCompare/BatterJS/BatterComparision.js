@@ -95,7 +95,7 @@ function BatterComparision() {
         '2 YEAR ',
         '12 v',
         '130 Ah',
-        'no',
+        'no                                                                                                                                              ',
         '85000.00',
         'availble'
     ]
@@ -303,8 +303,8 @@ function BatterComparision() {
 
     return (
         <div>
-            <label htmlFor="dropdown" className='labelHead'>Province</label>
-            <select id="dropdown" value={selectedOption} onChange={handleDropdownChange}>
+
+            <select id="dropdown-value-battery" value={selectedOption} onChange={handleDropdownChange}>
                 {BatterNames.map((option, index) => (
                     <option key={index} value={option}>
                         {option}
@@ -312,7 +312,7 @@ function BatterComparision() {
                 ))}
             </select>
             {pic1 &&
-                <card>
+                <card className='battery-compare-card'>
                     <img
                         className='fuelImage'
                         src={pic22}
@@ -323,7 +323,7 @@ function BatterComparision() {
                     <div className="battery-com">warranty :{Battery1[2]}</div>
                     <div className="battery-com">Voltage:{Battery1[3]}</div>
                     <div className="battery-com">Current:{Battery1[4]}</div>
-                    <div className="battery-com">Other cost:{Battery1[5]}</div>
+                    <div className="battery-com" >Other cost:{Battery1[5]}</div>
                     <div className="battery-com">Price:{Battery1[6]}</div>
                     <div className="battery-com">Installment plans  :{Battery1[7]}
                         <img
@@ -337,7 +337,7 @@ function BatterComparision() {
                 </card>
             }
             {pic2 &&
-                <card>
+                <card className='battery-compare-card'>
                     <img
                         className='fuelImage'
                         src={pic22}
@@ -362,7 +362,7 @@ function BatterComparision() {
                 </card>
             }
             {pic3 &&
-                <card>
+                <card className='battery-compare-card'>
                     <img
                         className='fuelImage'
                         src={pic33}
@@ -373,7 +373,7 @@ function BatterComparision() {
                     <div className="battery-com">warranty :{Battery3[2]}</div>
                     <div className="battery-com">Voltage:{Battery3[3]}</div>
                     <div className="battery-com">Current:{Battery3[4]}</div>
-                    <div className="battery-com">Other cost:{Battery3[5]}</div>
+                    <div className="battery-com" style={{width:'950'}}>Other cost:{Battery3[5]}</div>
                     <div className="battery-com">Price:{Battery3[6]}</div>
                     <div className="battery-com">Installment plans  :{Battery3[7]}
                         <img
@@ -386,7 +386,7 @@ function BatterComparision() {
                 </card>
             }
             {pic4 &&
-                <card>
+                <card className='battery-compare-card'>
                     <img
                         className='fuelImage'
                         src={pic44}
@@ -410,7 +410,7 @@ function BatterComparision() {
                 </card>
             }
             {pic5 &&
-                <card>
+                <card className='battery-compare-card'>
                     <img
                         className='fuelImage'
                         src={pic55}
@@ -434,7 +434,7 @@ function BatterComparision() {
                 </card>
             }
             {pic6 &&
-                <card>
+                <card className='battery-compare-card'>
                     <img
                         className='fuelImage'
                         src={pic66}
@@ -458,7 +458,7 @@ function BatterComparision() {
                 </card>
             }
             {pic7 &&
-                <card>
+                <card className='battery-compare-card'>
                     <img
                         className='fuelImage'
                         src={pic77}
@@ -482,7 +482,7 @@ function BatterComparision() {
                 </card>
             }
             {pic8 &&
-                <card>
+                <card className='battery-compare-card'>
                     <img
                         className='fuelImage'
                         src={pic88}
@@ -506,7 +506,7 @@ function BatterComparision() {
                 </card>
             }
             {pic9 &&
-                <card>
+                <card className='battery-compare-card'>
                     <img
                         className='fuelImage'
                         src={pic99}
@@ -531,7 +531,7 @@ function BatterComparision() {
                 </card>
             }
             {pic10 &&
-                <card>
+                <card className='battery-compare-card'>
                     <img
                         className='fuelImage'
                         src={pic100}
@@ -554,7 +554,7 @@ function BatterComparision() {
                 </card>
             }
             {pic11 &&
-                <card>
+                <card >
                     <img
                         className='fuelImage'
                         src={pic111}

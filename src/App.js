@@ -23,6 +23,7 @@ import GarageFindPageCC from './Screens/Garage/GarageFindPageCC';
 import MakeAppoinmentForm from './Components/Garage/MakeAppoinmentForm';
 import MakeAppoinmentPage from './Screens/Garage/MakeAppoinmentPage';
 import BatteryComparisionPage from './Screens/BateryComparision/BatteryComparisionPage';
+import CustomerReviewPage from './Screens/CustomerReview/CustomerReviewPage';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
         <Route path='/seeServices' element={<GarageFindPageCC/>}/>
         <Route path='/makeAppoinment' element={<MakeAppoinmentPage/>}/>
         <Route path='/batteryCompare' element={<BatteryComparisionPage/>}/>
+        <Route path='/shopReview' element={<CustomerReviewPage/>}/>
       </Routes>
     </div>
 
