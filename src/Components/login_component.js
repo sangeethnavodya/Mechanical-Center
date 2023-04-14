@@ -25,8 +25,12 @@ function Login() {
             axios.post('http://localhost:4000/register/login', formData)
                 .then(response => {
                     console.log(response.data);
-                    if (response.data.message === 'owner')
+                    if (response.data.message === 'owner'){
                         navigate('/ownerHome')
+                        localStorage.setItem('owner_id',response.data.data._id)
+                        localStorage.setItem('owner_email',response.data.data.Email)
+                    }
+
                 })
                 .catch(error => {
                     console.log(error);
@@ -70,18 +74,21 @@ function Login() {
             <div className='topic'>
                 <h3 className='head'>Sign In</h3>
             </div>
+            
             <div className='form'>
-                <div>
-                    <input type="radio" onChange={handleRadioButton} value="Admin" checked={selectedOption === 'Admin'} />
-                    <label>Admin</label>
+                <div className='radio'>
+                <div className='type-radio'>
+                    <input className='input-radio' type="radio" onChange={handleRadioButton} value="Admin" checked={selectedOption === 'Admin'} />
+                    <label className='label-radio'>Admin</label>
                 </div>
-                <div>
-                    <input type="radio" onChange={handleRadioButton} value="Owner" checked={selectedOption === 'Owner'} />
-                    <label>Owner</label>
+                <div className='type-radio'>
+                    <input className='input-radio' type="radio" onChange={handleRadioButton} value="Owner" checked={selectedOption === 'Owner'} />
+                    <label className='label-radio'>Owner</label>
                 </div>
-                <div>
-                    <input type="radio" onChange={handleRadioButton} value="Customer" checked={selectedOption === 'Customer'} />
-                    <label>Customers</label>
+                <div className='type-radio'>
+                    <input className='input-radio' type="radio" onChange={handleRadioButton} value="Customer" checked={selectedOption === 'Customer'} />
+                    <label className='label-radio'>Customers</label>
+                </div>
                 </div>
                 <div className='Email'>
                     <label className='emaillabel'>Email</label>

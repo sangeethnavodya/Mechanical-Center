@@ -14,6 +14,14 @@ import ItemAddingPage from './Screens/ItemAddingPage';
 import ShopWithItemPage from './Screens/ShopWithItemPage';
 import ShopHomePageCC from './Screens/ShopHomePageCC';
 import ShopWithItemPageCC from './Screens/ShopWithItemPageCC';
+import CurrentLocationFormPage from './Screens/CurrentLocationFormPage';
+import NearMePage from './Screens/NearMePage';
+import GarageHomePage from './Screens/Garage/GarageHomePage';
+import CreatedServices from './Components/Garage/CreatedService';
+import CreatedServicesPage from './Screens/Garage/CreatedServicesPage';
+import GarageFindPageCC from './Screens/Garage/GarageFindPageCC';
+import MakeAppoinmentForm from './Components/Garage/MakeAppoinmentForm';
+import MakeAppoinmentPage from './Screens/Garage/MakeAppoinmentPage';
 
 
 function App() {
@@ -33,8 +41,12 @@ function App() {
         <Route path='/shopView' element={<ShopWithItemPage/>}/>
         <Route path='/seeShops' element={<ShopHomePageCC/>}/>
         <Route path='/shopViewCC' element={<ShopWithItemPageCC/>}/>
-
-
+        <Route path='/locateMYFuel' element={<CurrentLocationFormPage/>}/>
+        <Route path='/nearStation' element={<NearMePage/>}/>
+        <Route path='/garageHome' element={<GarageHomePage/>}/>
+        <Route path='/createdServices' element={<CreatedServicesPage/>}/>
+        <Route path='/seeServices' element={<GarageFindPageCC/>}/>
+        <Route path='/makeAppoinment' element={<MakeAppoinmentPage/>}/>
       </Routes>
     </div>
 

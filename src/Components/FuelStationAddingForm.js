@@ -7,15 +7,22 @@ import ExisitngFuelStation from './ExistingFuelStation';
 
 function FuelStationAddForm() {
     const [selectedOption, setSelectedOption] = useState("Please choose an option");
+    const [selectedOptionDistrict,setSelectedOptionDistrict]=useState("Please choose an option")
     const [formData, setFormData] = useState({
         Name: "",
         CompanyName: "",
-        Province: ""
+        Province: "",
+        District:""
     });
     const [nameValue, setnameValue] = useState('')
-    const [CompanyNameValue,setCompanyNameValue]=useState('')
+    const [CompanyNameValue, setCompanyNameValue] = useState('')
     const [existing, setexisting] = useState(false)
     const fuelStationAddFormRef = useRef(null);
+    const District = ['--Please choose an option--', 'Colombo', 'Gampaha', ' Kalutara', ' Kandy',
+        ' Matale', 'Nuwara Eliya', 'Galle', 'Matara', 'Hambantota', 'Jaffna', 'Kilinochchi', 'Mannar',
+        'Vavuniya', 'Mullaitivu', 'Batticaloa', 'Ampara', 'Trincomalee', 'Kurunegala', 'Puttalam',
+        'Anuradhapura', 'Polonnaruwa', 'Badulla', 'Moneragala', 'Ratnapura', 'Kegalle'
+    ];
 
 
     function handleInputChange(e) {
@@ -24,7 +31,7 @@ function FuelStationAddForm() {
         if (name === 'Name') {
             setnameValue(e.target.value)
         }
-        if(name==='CompanyName'){
+        if (name === 'CompanyName') {
             setCompanyNameValue(e.target.value)
         }
 
@@ -39,6 +46,15 @@ function FuelStationAddForm() {
 
         setFormData((prev) => {
             return { ...prev, Province: provinceValue };
+        });
+    }
+
+    function handleProvince(event){
+        const DistrictValue=event.target.value
+        setSelectedOptionDistrict(DistrictValue);
+
+        setFormData((prev) => {
+            return { ...prev, District: DistrictValue };
         });
     }
 
@@ -86,6 +102,14 @@ function FuelStationAddForm() {
                     <option value="Uva Province">Uva Province</option>
                     <option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
                     <option value="Nothern Province">Nothern Province</option>
+                </select>
+                <label htmlFor="dropdown" className='labelHead'>District</label>
+                <select id="dropdown" value={selectedOptionDistrict} onChange={handleProvince}>
+                    {District.map((option, index) => (
+                        <option key={index} value={option}>
+                            {option}
+                        </option>
+                    ))}
                 </select>
                 <div className='form'>
                     <button className='Add Station' onClick={handleSubmit}>Add Station</button>
