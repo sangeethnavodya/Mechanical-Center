@@ -51,7 +51,7 @@ const ShopList = () => {
       <td className='table-shop-td'>
         <img src={row.image.url} alt="product" width="100" height="100" />
       </td>
-      <td >{row.title}</td>
+      <td className='table-shop-td-name' >{row.title}</td>
       <td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclick(row)}>Add item to shop</button></td>
       <td className='table-shop-td'><button  className='button-shop' onClick={() => handleOnclickShop(row)}>Show shop</button></td>
 

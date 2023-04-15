@@ -10,3 +10,54 @@ table {
   th {
     background-color: #f2f2f2;
   }
+  .tableMain-ccfuel {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .tableHead-ccfuel {
+    background-color: #ddd;
+  }
+  
+  .tableRow-ccfuel {
+    border-bottom: 1px solid #ddd;
+    font-weight: normal;
+  }
+  
+  .tableRow-ccfuel:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .tableMain-ccfuel th,
+  .tableMain-ccfuel td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .tableMain-ccfuel th:first-child,
+  .tableMain-ccfuel td:first-child {
+    padding-left: 16px;
+  }
+  
+  .tableMain-ccfuel th:last-child,
+  .tableMain-ccfuel td:last-child {
+    padding-right: 16px;
+  }
+  
+  .main-ccfuel button {
+    background-color: #008CBA;
+    border: none;
+    color: #fff;
+    padding: 12px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+  
+  .main-ccfuel button:hover {
+    background-color: #006d87;
+  }
+  

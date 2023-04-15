@@ -69,5 +69,10 @@ button.Add:hover {
 
 .item-desc-review-name, .item-desc-review {
     display: block;
+  }
+  .item-desc-review-name{
+    color: blueviolet;
+  }
+  .item-desc-review{
     color: #4267B2;
   }

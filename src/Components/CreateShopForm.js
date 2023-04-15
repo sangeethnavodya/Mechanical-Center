@@ -9,6 +9,13 @@ function CreateShopForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [selectedOptionDistrict, setSelectedOptionDistrict] = useState("Please choose an option")
+  const [selectedOption, setSelectedOption] = useState("Please choose an option");
+  const District = ['--Please choose an option--', 'Colombo', 'Gampaha', ' Kalutara', ' Kandy',
+    ' Matale', 'Nuwara Eliya', 'Galle', 'Matara', 'Hambantota', 'Jaffna', 'Kilinochchi', 'Mannar',
+    'Vavuniya', 'Mullaitivu', 'Batticaloa', 'Ampara', 'Trincomalee', 'Kurunegala', 'Puttalam',
+    'Anuradhapura', 'Polonnaruwa', 'Badulla', 'Moneragala', 'Ratnapura', 'Kegalle'
+  ];
 
   const navigate = useNavigate();
   const handleSubmit = async (event) => {
@@ -17,7 +24,10 @@ function CreateShopForm() {
     try {
       const formData = new FormData();
       formData.append('image', image);
-      formData.append('title', title)
+      formData.append('title', title);
+      formData.append('province',selectedOption)
+      formData.append('district',selectedOptionDistrict)
+
       await axios.post('http://localhost:4000/shop/create', formData);
       navigate('/ownerHome')
       setIsSuccess(true);
@@ -30,6 +40,14 @@ function CreateShopForm() {
     }
     setIsLoading(false);
   };
+  function handleProvince(event) {
+    const DistrictValue = event.target.value
+    setSelectedOptionDistrict(DistrictValue);
+  }
+  function handleDropdownChange(event) {
+    const provinceValue = event.target.value;
+    setSelectedOption(provinceValue);
+  }
 
   const handleImageChange = (event) => {
     setImage(event.target.files[0]);
@@ -39,18 +57,36 @@ function CreateShopForm() {
     setTitle(event.target.value)
   }
   return (
-    <form className='main'>
-      <div className='topic'>
-        <h3 className='create-shop-title'>Create Your Shop</h3>
+    <form className='main-form-shop'>
+      <div className='topic-form-shop'>
+        <h3 className='create-shop-title-form-shop'>Create Your Shop</h3>
       </div>
-      <div className='form'>
-        <div className='Email'>
-          <label className='emaillabel'>Shop Name</label>
-          <input type="email" name="Email" className="FormControl" placeholder="Enter Name" onChange={handleTitleChange} />
+      <div className='form-form-shop'>
+        <div className='Email-form-shop'>
+          <label className='labelHead-form-shop'>Shop Name</label>
+          <input type="email" name="Email" className="FormControl-form-shop" placeholder="Enter Name" onChange={handleTitleChange} />
         </div>
-        <label htmlFor="image" className='emaillabel' >Select an image:</label>
-        <input type="file" className='FormControl' onChange={handleImageChange} />
-        <button className='signup' onClick={handleSubmit}>Create Shop</button>
+        <label htmlFor="dropdown" className='labelHead-form-shop'>Province</label>
+        <select id="dropdown-form-shop" value={selectedOption} onChange={handleDropdownChange}>
+          <option value="">--Please choose an option--</option>
+          <option value="Western Province">Western Province</option>
+          <option value="Southern Province">Southern Province</option>
+          <option value="Central Province">Central Province</option>
+          <option value="Uva Province">Uva Province</option>
+          <option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
+          <option value="Nothern Province">Nothern Province</option>
+        </select>
+        <label htmlFor="dropdown" className='labelHead-form-shop'>District</label>
+        <select id="dropdown" value={selectedOptionDistrict} onChange={handleProvince}>
+          {District.map((option, index) => (
+            <option key={index} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+        <label htmlFor="image" className='labelHead-form-shop' >Select an image:</label>
+        <input type="file" className='FormControl-form-shop' onChange={handleImageChange} />
+        <button className='signup-form-shop' onClick={handleSubmit}>Create Shop</button>
       </div>
     </form>
   )

@@ -1,50 +1,58 @@
 /* Styles for the main container */
 .main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #05484b;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Styles for the table */
-  .tableMain {
-    width: 100%;
-    border-collapse: collapse;
-    border: 2px solid rgb(95, 103, 219);
-    margin-top: 20px;
-  }
-  
-  /* Styles for the table header */
-  .tableHead {
-    background-color: #333;
-    color: rgb(57, 138, 158);
-  }
-  
-  /* Styles for the table row */
-  .tableRow {
-    border: 1px solid #ddd;
-  }
-  
-  /* Styles for the table cells */
-  th, td {
-    padding: 10px;
-    text-align: left;
-  }
-  
-  /* Styles for even table rows */
-  tr:nth-child(even) {
-    background-color: rgb(71, 219, 245);
-  }
-  
-  /* Styles for odd table rows */
-  tr:nth-child(odd) {
-    background-color: rgb(71, 219, 245);
-  }
-  
-  /* Styles for hover effect on table rows */
-  tr:hover {
-    background-color: rgb(173, 211, 218);
-    cursor: pointer;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f37070;
+  background-image: url('/src/Assests/main_back.jpg');
+  font-family: Arial, sans-serif;
+}
+
+/* Styles for the table */
+.tableMain {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF;
+}
+
+/* Styles for the table header */
+.tableHead {
+  background-color: #0077B6;
+  color: #d43737;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Styles for the table row */
+.tableRow {
+  border-top: 1px solid #EAEAEA;
+  transition: background-color 0.3s ease;
+}
+
+/* Styles for the table cells */
+th, td {
+  padding: 12px 20px;
+  text-align: left;
+}
+.table-shop-td-name{
+  color: #EAEAEA;
+}
+
+/* Styles for even table rows */
+.tableRow:nth-child(even) {
+  background-color: #2aa3ac;
+}
+
+/* Styles for odd table rows */
+.tableRow:nth-child(odd) {
+  background-color: #50d7e9;
+}
+
+/* Styles for hover effect on table rows */
+.tableRow:hover {
+  background-color: #F1F1F1;
+  cursor: pointer;
+}

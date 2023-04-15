@@ -1,64 +1,95 @@
-.shop-main-div {
-  width: 100%;
-  margin-top: 30px;
+.item-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.shop-main-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 16px;
-  border: 1px solid #ddd;
+.card {
   background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.shop-main-head {
-  background-color: #f7f7f7;
-  font-size: 18px;
+.item-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-.shop-tr {
-  border: none;
+.card-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
-.shop-th,
-.shop-td {
-  padding: 10px;
-  text-align: left;
+.item-desc {
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+.item-price {
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom:30px;
-  border: 1px solid #ddd;
+  margin: 8px 0;
 }
 
-.shop-th {
-  font-size: 18px;
+.item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 8px 0;
 }
 
-.shop-td {
-  font-size: 16px;
-}
-
-.shop-table-rows:hover {
-  background-color: #f5f5f5;
-}
-
-.button-shop {
-  background-color: #4CAF50;
+.button {
+  background-color: #4267b2; /* Facebook Blue */
+  border: none;
   color: white;
-  padding: 10px 20px;
+  padding: 8px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 14px;
+  margin: 8px 0;
   cursor: pointer;
   border-radius: 4px;
-  border: none;
 }
 
-.button-shop:hover {
-  background-color: #3e8e41;
+.button:hover {
+  background-color: #3a5a98;
 }
 
-.table-shop-td {
-  text-align: center;
+.iconLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-img-logo{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.shop_name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 8px 0;
+}
+.shop-main-div{
+background-image: url('/src/Assests/brown.jpg');
+background-color: rgba(255, 255, 255, 0);
+background-repeat: no-repeat;
+background-size: 100%;
+height: max-content;
+
+}
+.table-shop-td-name{
+  color: aqua;
+  font-size: 24px;
+  font-weight: 800;
 }
