@@ -8,16 +8,19 @@ function ExisitngFuelStationCC() {
     const navigate = useNavigate();
 
     const generatePDF = () => {
-        var doc=new jsPDF("p","pt","a4");
-        doc.html(document.querySelector("#tablePDF"),{
-        callback:function(pdf)
-        {
-            pdf.save("mypdf.pdf");
-
-        }
+        var doc = new jsPDF({
+            orientation: "landscape", // set the orientation to landscape
+            unit: "pt", // set the unit to points
+            format: "a3", // set the page format to A4
+            width: 1500 // set the width to 800 points
+        });
+        doc.html(document.querySelector("#tablePDF"), {
+            callback: function(pdf) {
+                pdf.save("mypdf.pdf");
+            }
+        });
     }
-        )
-    }
+    
 
     function handleDelete(event) {
         console.log(event)
@@ -55,7 +58,7 @@ function ExisitngFuelStationCC() {
         fetchStations()
     }, [])
     return (
-        <div className="main">
+        <div className="main-fuel">
             <div id="tablePDF">
             <table className="tableMain" id="pdfTable">
                 <thead className="tableHead">
@@ -70,7 +73,7 @@ function ExisitngFuelStationCC() {
                 </tbody>
             </table>
             </div>
-            <button onClick={generatePDF}>Download Report</button>
+            <button onClick={generatePDF} className='pdf-download'>Download Report</button>
 
         </div>
     )

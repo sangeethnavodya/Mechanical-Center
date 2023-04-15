@@ -1,5 +1,5 @@
 /* Styles for the main container */
-.main {
+.main{
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -8,6 +8,7 @@
   font-family: Arial, sans-serif;
 }
 
+
 /* Styles for the table */
 .tableMain {
   width: 100%;
@@ -15,7 +16,8 @@
   border-spacing: 0;
   margin-top: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  background-color: #FFFFFF;
+  background-color: #f0ebeb;
+  opacity: 0.8;
 }
 
 /* Styles for the table header */
@@ -28,7 +30,7 @@
 
 /* Styles for the table row */
 .tableRow {
-  border-top: 1px solid #EAEAEA;
+  border-top: 1px solid #630808;
   transition: background-color 0.3s ease;
 }
 
@@ -38,7 +40,7 @@ th, td {
   text-align: left;
 }
 .table-shop-td-name{
-  color: #EAEAEA;
+  color: #e20909;
 }
 
 /* Styles for even table rows */
@@ -48,11 +50,14 @@ th, td {
 
 /* Styles for odd table rows */
 .tableRow:nth-child(odd) {
-  background-color: #50d7e9;
+  background-color: #338792;
 }
 
 /* Styles for hover effect on table rows */
 .tableRow:hover {
-  background-color: #F1F1F1;
+  background-color: #8b2222;
   cursor: pointer;
+}
+.pdf-download{
+  margin-top: 10px;
 }

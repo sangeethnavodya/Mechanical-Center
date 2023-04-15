@@ -25,7 +25,7 @@ function NearMeStation() {
     }, [])
 
     const tableRows = fuelStations.map((row, index) => (
-        <tr key={index}>
+        <tr key={index} >
             <td>{row.Name}</td>
             <td>{row.CompanyName}</td>
             <td>{row.Province}</td>
@@ -33,10 +33,10 @@ function NearMeStation() {
         </tr>
     ));
     return (
-        <div>
-            <table>
-                <thead>
-                    <tr>
+        <div className="table-div-near-me">
+            <table className="table-near-me">
+                <thead className="table-head-me">
+                    <tr className="table-row-me">
                         <th>Name</th>
                         <th>Company Name</th>
                         <th>Province</th>
