@@ -58,6 +58,7 @@ function Login() {
                     console.log(response.data);
                     // Handle success response
                     if(response.data.message==='Customer login successfully'){
+                        localStorage.setItem('customer_name',response.data.data.Name)
                         navigate('/customerHome')
                        }
                 })

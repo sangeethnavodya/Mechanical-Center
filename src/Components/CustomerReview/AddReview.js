@@ -6,7 +6,8 @@ import ExisitngCustomerReview from "./ExistingCustomerReview";
 function AddReview() {
     const [formData, setFormData] = useState({
         Review: "",
-        Shop_id: localStorage.getItem('shop_id')
+        Shop_id: localStorage.getItem('shop_id'),
+        Customer_Name:localStorage.getItem('customer_name')
     });
     const [nameValue, setnameValue] = useState('')
     const [reviewAdded, setReviewAdded] = useState(false)

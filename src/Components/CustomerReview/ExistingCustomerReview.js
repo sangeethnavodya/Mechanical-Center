@@ -22,7 +22,8 @@ function ExisitngCustomerReview() {
     const cardViews = review?.map((review, index) => (
         <div className="card-review" key={index}>
             <div className="card-container-review">
-                <h4 className="item-desc-review">{review.Review}</h4>
+                <h4 className="item-desc-review-name">{review.Customer_Name}</h4>
+                <h5 className="item-desc-review">{review.Review}</h5>
             </div>
         </div>
     ));
