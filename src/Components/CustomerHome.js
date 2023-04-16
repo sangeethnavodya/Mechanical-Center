@@ -14,6 +14,7 @@ function CustomerHome() {
               <li className='topic'><a href='/locateMYShop'>Locate Shop near me</a> </li>
               <li className='topic'><a href='/seeServices'>Available Services</a> </li>
               <li className='topic'><a href='/batteryCompare'>Battery Compare</a> </li>
+              <li className='topic'><a href='/findInsurance'>Find Insurance</a> </li>
             </ul>
         </div>
     )
