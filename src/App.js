@@ -24,6 +24,7 @@ import MakeAppoinmentForm from './Components/Garage/MakeAppoinmentForm';
 import MakeAppoinmentPage from './Screens/Garage/MakeAppoinmentPage';
 import BatteryComparisionPage from './Screens/BateryComparision/BatteryComparisionPage';
 import CustomerReviewPage from './Screens/CustomerReview/CustomerReviewPage';
+import InsuranceCreatePage from './Screens/Insurance/InsuranceCreatePage';
 
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
         <Route path='/makeAppoinment' element={<MakeAppoinmentPage/>}/>
         <Route path='/batteryCompare' element={<BatteryComparisionPage/>}/>
         <Route path='/shopReview' element={<CustomerReviewPage/>}/>
+        <Route path='/createInsurance' element={<InsuranceCreatePage/>}/>
       </Routes>
     </div>
 

@@ -27,6 +27,7 @@ function CreateShopForm() {
       formData.append('title', title);
       formData.append('province',selectedOption)
       formData.append('district',selectedOptionDistrict)
+      console.log(formData)
 
       await axios.post('http://localhost:4000/shop/create', formData);
       navigate('/ownerHome')

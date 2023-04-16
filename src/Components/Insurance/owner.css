@@ -1,0 +1,40 @@
+.check-box-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.check-box {
+    display: flex;
+    align-items: center;
+}
+
+.check-box-input {
+    margin-right: 10px;
+}
+
+.check-box-label {
+    font-size: 16px;
+}
+
+.label-check-box {
+    margin-left: 10px;
+    font-size: smaller;
+    color: aliceblue;
+}
+.create-shop-title-form-insurance{
+    color: rgb(245, 245, 250);
+    margin-bottom: 20px;
+}
+.insurance-create-form{
+    background-image: url('/src/Assests/insurance_background.jpg');
+    
+}
+.main-div-insurance{
+    background-color: rgb(245, 245, 250,0.1);
+
+    
+}
+.labelHead-form-insurance{
+    color: aliceblue;
+}
