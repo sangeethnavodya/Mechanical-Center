@@ -27,6 +27,8 @@ import CustomerReviewPage from './Screens/CustomerReview/CustomerReviewPage';
 import InsuranceCreatePage from './Screens/Insurance/InsuranceCreatePage';
 import CustomerFindInsurancePage from './Screens/Insurance/CustomerFindInsurancePage';
 import SuitableCompanies from './Components/Insurance/SuitableCompanies';
+import CurrentLocationShopPage from './Screens/ShopLocating/LocateShopPage';
+import NearmeShop from './Components/locateShop/NearmeShop';
 
 
 function App() {
@@ -56,7 +58,9 @@ function App() {
         <Route path='/shopReview' element={<CustomerReviewPage />} />
         <Route path='/createInsurance' element={<InsuranceCreatePage />} />
         <Route path='/findInsurance' element={<CustomerFindInsurancePage />} />
-        <Route path='insuranceFinder' element={<SuitableCompanies/>}/>
+        <Route path='/insuranceFinder' element={<SuitableCompanies/>}/>
+        <Route path='/locateMYShop' element={<CurrentLocationShopPage/>}/>
+        <Route path='/nearShop' element={<NearmeShop/>}/>
         
       </Routes>
     </div>
