@@ -29,6 +29,7 @@ import CustomerFindInsurancePage from './Screens/Insurance/CustomerFindInsurance
 import SuitableCompanies from './Components/Insurance/SuitableCompanies';
 import CurrentLocationShopPage from './Screens/ShopLocating/LocateShopPage';
 import NearmeShop from './Components/locateShop/NearmeShop';
+import TirePage from './Screens/Tire/TirePage';
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
         <Route path='/insuranceFinder' element={<SuitableCompanies/>}/>
         <Route path='/locateMYShop' element={<CurrentLocationShopPage/>}/>
         <Route path='/nearShop' element={<NearmeShop/>}/>
+        <Route path='tireCompare' element={<TirePage/>}/>
         
       </Routes>
     </div>
