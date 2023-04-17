@@ -124,10 +124,10 @@ function TireComparision() {
     const vehi4 = [
         '195/55R15 SPORTSWAY',
         'LKR 24,850.00',
-        '.Four wide circumferential tread grooves and lateral grooves with fine sipes provide efficient water evacuation, outstanding wet performance',
-        'Continuous block patterns on shoulder enhance the ride stability at high speed cornering. The rim protector will protect wheels from curb damage',
-        'Continuous outside tread blocks enhance excellent performance and precise control when cornering at high speed. The special rib segment design optimize contact pressure distribution, improve road contact area and provide precise control. The serrated groove walls absorb noise and deliver a quieter ride.',
-        'Special tread compound delivers excellent grip on both dry and wet roads and reduce the rolling resistance to save oil and protect environment',
+        ':* Four wide circumferential tread grooves and lateral grooves with fine sipes provide efficient water evacuation, outstanding wet performance',
+        ':* Continuous block patterns on shoulder enhance the ride stability at high speed cornering. The rim protector will protect wheels from curb damage',
+        ':* Continuous outside tread blocks enhance excellent performance and precise control when cornering at high speed. The special rib segment design optimize contact pressure distribution, improve road contact area and provide precise control. The serrated groove walls absorb noise and deliver a quieter ride.',
+        ':* Special tread compound delivers excellent grip on both dry and wet roads and reduce the rolling resistance to save oil and protect environment',
     ]
     const vehi5 = [
         '195/55R16 BLUTRACHP THAILAND',
@@ -147,11 +147,103 @@ function TireComparision() {
         'Price: LKR 23,450.00',
         'Other details :  Best selling Tyre in Sri Lanka'
     ]
+    const vehi8 = [
+        '185/70R14SPTRGT1 (INDONESIA)',
+        'Price: LKR 30,100.75',
+        'Touring tyre featuring long life, enhanced stability on wet roads, low noise and ride comfort',
+        'The tread compound is a combination of 2 types of special polymer to provide enhanced grip and longer life',
+        'The construction and contact shape have been enhanced to reduce irregular wear and improve handling'
+    ]
+    const vehi9 = [
+        '185/65R15 K435 KOREA',
+        'Price: LKR 33,900.25',
+        'Wide lateral grooves incorporated in to the inside blocks deliver hydroplaning resistance for excellent wet handling and braking',
+        'Optimal widths and positioning of the three channel grooves ensures excellent performance in wet driving conditions',
+        'Wide outer grooves provide maximum water evacuation which promotes wet traction keeping the tyre cooler in the dry.'
+    ]
+    const vehi10 = [
+        '205/75R15C 8PRENERGYWAY 11CHINA',
+        'Price: LKR 35,520.00',
+        '.Reinforced structure and special abrasion resistant tread compound deliver extra puncture resistance and load bearing capability with more mileage',
+        '.Continuous tread patterns on shoulder and solid shoulder ribs responsive handling and even wear',
+        '.Three main zigzag grooves combined with lateral blocks provide excellent ride stability and great traction on all kinds of road conditions',
+        '.White sidewall rib shows extraordinary appearance'
+    ]
+    const vehi11 = [
+        '205/55R16 TOURING VP PLUS',
+        'Price: LKR 37,780.75',
+        'Best selling tyre in Sri Lanka'
+    ]
+    const vehi12 = [
+        '205/60R16 CHAMPIRO TOURING A/S',
+        'Price: LKR 34,000.25',
+        ':  Champiro Touring A/S is an all-season touring tire designed for the latest passenger cars and crossover vehicles',
+        ' It combines precise handling and control with a quiet and comfortable ride',
+        'Backed by a 60,000 mile limited warranty, the Champiro Touring A/S also delivers great mileage for an outstanding value.'
+    ]
+    const vehi13 = [
+        '215/60R17 SPEEDWAY CHINA',
+        'Price: LKR 34,520.00',
+        'Four wide circumferential tread grooves deliver the ride stability and offer excellent performance on wet conditions. Improved grooves and bead profile design offer better ride stability, endurance and handling performance',
+        'The open shoulder grooves prevent aquaplaning with enhanced wet grip performance and provide excellent water evacuation.Continuous tread blocks on both shoulder give great support to enhance the ride stability when cornering',
+        'Variable pitch pattern and solid center ribs improve the ride stability, reduce the noise and deliver a comfortable ride',
+        'High-density sipes with special compound deliver a smooth ride and improve traction on dry and wet roads. Jointless nylon band and strong structure design provided the strong carcass to enhance the reliability and Durability'
+    ]
+    const vehi14 = [
+        '215/45R17SPORTSWAY (CHINA)',
+        'Price: LKR 27,480.75',
+        'Four wide circumferential tread grooves deliver the ride stability and offer excellent performance on wet conditions. Improved grooves and bead profile design offer better ride stability, endurance and handling performance',
+        'The open shoulder grooves prevent aquaplaning with enhanced wet grip performance and provide excellent water evacuation.Continuous tread blocks on both shoulder give great support to enhance the ride stability when cornering',
+        'Variable pitch pattern and solid center ribs improve the ride stability, reduce the noise and deliver a comfortable ride',
+        'High-density sipes with special compound deliver a smooth ride and improve traction on dry and wet roads. Jointless nylon band and strong structure design provided the strong carcass to enhance the reliability and Durability'
+    ]
+    const vehi15 = [
+        '215/65R16SP LM705 JAPAN',
+        'Price: LKR 67,900.25',
+        'The SP Sport LM704 is the ideal tyre for a wide range of cars with high levels of handling, low noise and excellent wet grip',
+        'Delivering improved tread wear thanks to a new innovative silica tread compound and expanded contact area on the road, means you get value for money coupled with performance '
+    ]
+    const vehi16 = [
+        '195/55R15 SPORTSWAY',
+        'LKR 24,850.00',
+        'Four wide circumferential tread grooves and lateral grooves with fine sipes provide efficient water evacuation, outstanding wet performance',
+        '.Continuous block patterns on shoulder enhance the ride stability at high speed cornering. The rim protector will protect wheels from curb damage',
+        'Continuous outside tread blocks enhance excellent performance and precise control when cornering at high speed. The special rib segment design optimize contact pressure distribution, improve road contact area and provide precise control. The serrated groove walls absorb noise and deliver a quieter ride',
+        'Special tread compound delivers excellent grip on both dry and wet roads and reduce the rolling resistance to save oil and protect environment'
+    ]
+    const vehi17 = [
+        '195/55R16 BLUTRACHP THAILAND',
+        'Price: LKR 47,180.75',
+        'Best selling tyre in Sri Lanka'
+    ]
+    const vehi18 = [
+        '195/65R15 TECHNO ( THAILAND)',
+        'Price: LKR 39,900.25',
+        'Every drive is a safe and reliable with TECHNO tyres. Ideal choice for small to mid-sized passenger cars with basic entry level performance and economical vale',
+        'Now everyone can drive with tyres that deliver reliable quality and good performance on wet conditions',
+        'Optimized sipe angle and lug effectively prevent tyre deformation and enhances water channeling to resist hydroplaning for your safety on wet roads.'
+    ]
+    const vehi19 = [
+        '235/75R15 ALL TERRAIN AK3 CHINA',
+        'Price: LKR 53,990.00',
+        'Best selling Tyre in Sri Lanka'
+    ]
+    const vehi20 = [
+        '235/60R18 HPM3',
+        'LKR 67,200.75',
+        'Best selling tyre in Sri Lanka'
+    ]
+    const vehi21 = [
+        '235/60R18HP7CHINA',
+        'Price: LKR 54,210.25',
+        'The new HP7 series brings about excellent handling, stability and comfort. Increasing the tire grounding area making it more quiet and smooth',
+        'Suitable for wet weather.'
+    ]
 
     return (
         <div className="tier-main-div">
             <div className="tier-inner-div">
-                <h2 className="tier-h2">Find Your Tier</h2>
+                <h2 className="tier-h2">Find Your Tire</h2>
                 <label htmlFor="dropdown" className='labelHead'>Select Your Car</label>
                 <select id="dropdown" value={selectedOption} onChange={handleDropdownChange}>
                     <option value="">--Please choose an option--</option>
@@ -208,8 +300,8 @@ function TireComparision() {
                             <div className="tier-details">
                                 <div className="tier-features">Name : {vehi3[0]}</div>
                                 <div className="tier-features">Other details:</div>
-                                <div className="tier-features">           {vehi3[1]}</div>
-                                <div className="tier-features">           {vehi3[2]}</div>
+                                <div className="tier-features"> {vehi3[1]}</div>
+                                <div className="tier-features"> {vehi3[2]}</div>
                                 <div className="tier-features">{vehi3[3]}</div>
                                 <div className="tier-features">{vehi3[4]}</div>
                                 <div className="tier-features">{vehi3[5]}</div>
@@ -222,9 +314,312 @@ function TireComparision() {
                         </card>
                     </div>
                 }
+                {vehicle2 &&
+                    <div className="card-view-div">
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle4i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi4[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features"> {vehi4[1]}</div>
+                                <div className="tier-features"> {vehi4[2]}</div>
+                                <div className="tier-features">{vehi4[3]}</div>
+                                <div className="tier-features">{vehi4[4]}</div>
+                                <div className="tier-features">{vehi4[5]}</div>
+                            </div>
+                        </card>
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle5i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi5[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features"> {vehi5[1]}</div>
+                                <div className="tier-features"> {vehi5[2]}</div>
+                            </div>
+                        </card>
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle6i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi6[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features">{vehi6[1]}</div>
+                                <div className="tier-features">{vehi6[2]}</div>
+                                <div className="tier-features">{vehi6[3]}</div>
+                                <div className="tier-features">{vehi6[4]}</div>
+                                <div className="tier-features">{vehi6[5]}</div>
+                            </div>
+                        </card>
+                    </div>
+                }
+                {vehicle3 &&
+                    <div className="card-view-div">
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle7i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi7[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features"> {vehi7[1]}</div>
+                                <div className="tier-features"> {vehi7[2]}</div>
 
+                            </div>
+                        </card>
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle8i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi8[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features"> {vehi8[1]}</div>
+                                <div className="tier-features"> {vehi8[2]}</div>
+                                <div className="tier-features"> {vehi8[3]}</div>
+                                <div className="tier-features"> {vehi8[4]}</div>
+                            </div>
+                        </card>
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle9i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi9[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features">{vehi9[1]}</div>
+                                <div className="tier-features">{vehi9[2]}</div>
+                                <div className="tier-features">{vehi9[3]}</div>
+                                <div className="tier-features">{vehi9[4]}</div>
+                            </div>
+                        </card>
+                    </div>
+                }
+                {vehicle4 &&
+                    <div className="card-view-div">
+                       <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle10i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi10[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features">{vehi10[1]}</div>
+                                <div className="tier-features">{vehi10[2]}</div>
+                                <div className="tier-features">{vehi10[3]}</div>
+                                <div className="tier-features">{vehi10[4]}</div>
+                                <div className="tier-features">{vehi10[5]}</div>
+                            </div>
+                        </card>
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle11i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi11[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features"> {vehi11[1]}</div>
+                                <div className="tier-features"> {vehi11[2]}</div>
+                            </div>
+                        </card>
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle12i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi12[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features">{vehi12[1]}</div>
+                                <div className="tier-features">{vehi12[2]}</div>
+                                <div className="tier-features">{vehi12[3]}</div>
+                                <div className="tier-features">{vehi12[4]}</div>
+                            </div>
+                        </card>
+                    </div>
+                }
+                {vehicle5 &&
+                    <div className="card-view-div">
+                       <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle13i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi13[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features">{vehi13[1]}</div>
+                                <div className="tier-features">{vehi13[2]}</div>
+                                <div className="tier-features">{vehi13[3]}</div>
+                                <div className="tier-features">{vehi13[4]}</div>
+                                <div className="tier-features">{vehi13[5]}</div>
+                            </div>
+                        </card>
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle14i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi14[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features"> {vehi14[1]}</div>
+                                <div className="tier-features"> {vehi14[2]}</div>
+                                <div className="tier-features"> {vehi14[3]}</div>
+                                <div className="tier-features"> {vehi14[4]}</div>
+                                <div className="tier-features"> {vehi14[5]}</div>
+                            </div>
+                        </card>
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle15i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi15[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features">{vehi15[1]}</div>
+                                <div className="tier-features">{vehi15[2]}</div>
+                                <div className="tier-features">{vehi15[3]}</div>
+                            </div>
+                        </card>
+                    </div>
+                }
+                 {vehicle6 &&
+                    <div className="card-view-div">
+                       <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle16i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi16[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features">{vehi16[1]}</div>
+                                <div className="tier-features">{vehi16[2]}</div>
+                                <div className="tier-features">{vehi16[3]}</div>
+                                <div className="tier-features">{vehi16[4]}</div>
+                                <div className="tier-features">{vehi16[5]}</div>
+                            </div>
+                        </card>
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle17i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi17[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features"> {vehi17[1]}</div>
+                                <div className="tier-features"> {vehi17[2]}</div>
+                            </div>
+                        </card>
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle18i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi18[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features">{vehi18[1]}</div>
+                                <div className="tier-features">{vehi18[2]}</div>
+                                <div className="tier-features">{vehi18[3]}</div>
+                                <div className="tier-features">{vehi18[4]}</div>
+                            </div>
+                        </card>
+                    </div>
+                }
+                   {vehicle7 &&
+                    <div className="card-view-div">
+                       <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle19i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi19[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features">{vehi19[1]}</div>
+                                <div className="tier-features">{vehi19[2]}</div>
+                            </div>
+                        </card>
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle20i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi20[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features"> {vehi20[1]}</div>
+                                <div className="tier-features"> {vehi20[2]}</div>
+                            </div>
+                        </card>
+                        <card className="card-view-tier">
+                            <div className="image-div">
+                                <img className="image-tier"
+                                    src={vehicle21i}
+                                    width='200px'
+                                    height='250px' />
+                            </div>
+                            <div className="tier-details">
+                                <div className="tier-features">Name : {vehi21[0]}</div>
+                                <div className="tier-features">Other details:</div>
+                                <div className="tier-features">{vehi21[1]}</div>
+                                <div className="tier-features">{vehi21[2]}</div>
+                                <div className="tier-features">{vehi21[3]}</div>
+                            </div>
+                        </card>
+                    </div>
+                }
             </div>
-
         </div>
     )
 }
