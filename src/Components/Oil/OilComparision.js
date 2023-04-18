@@ -135,78 +135,70 @@ function OilComparision() {
         '•	Vans and other light trucks'
     ]
     const vehi5 = [
-        '195/55R16 BLUTRACHP THAILAND',
-        'LKR 41,100.75',
-        'Best selling Tyre in Sri Lanka'
+        'MOBIL 1 Fully Synthetic 0W-20',
+        'Price: LKR 9,170.00',
+        'Mobil 1 0W-20 is engineered with a proprietary blend of high performance synthetic basestocks fortified with a precisely balanced component additive system',
+        'The low viscosity, advanced full synthetic formulation helps to increase engine efficiency and improve fuel economy',
+        'Mobil 1 0W-20 provides the high-temperature protection of higher viscosity oils while offering the best fuel economy in the Mobil 1 line.'
     ]
     const vehi6 = [
-        '195/65R15SPTRGT1 (INDONESIA)',
-        ': LKR 35,900.25',
-        'Touring tyre featuring long life, enhanced stability on wet roads',
-        'low noise and ride comfort',
-        'The tread compound is a combination of 2 types of special polymer to provide enhanced grip and longer life',
-        'The construction and contact shape have been enhanced to reduce irregular wear and improve handling.'
+        'MOBIL Multipurpose ATF',
+        'Price: LKR 5,980.00',
+        'Mobil Delvac 1340 is a high performance, heavy duty diesel engine oils formulated from advanced technology base oils and a balanced additive system.',
+        'It is specifically engineered for performance in intercooled, turbo-charged engines operating under severe on and off highway conditions.Mobil Delvac 1300 monogrades are used in a wide range of applications where a monograde lubricant is recommended.',
     ]
     const vehi7 = [
-        '185/70R14 SAFEWAY CHINA',
-        'Price: LKR 23,450.00',
-        'Other details :  Best selling Tyre in Sri Lanka'
+        'MOBIL 1 Fully Synthetic 5W-30',
+        'Price: LKR 36,980.00',
+        'Mobil 1 5W-30 is made with a proprietary blend of high performance synthetic basestocks fortified with a precisely balanced component system',
+        'cleaning power and engine protection, while meeting the demanding ILSAC GF-5 performance standards'
     ]
     const vehi8 = [
-        '185/70R14SPTRGT1 (INDONESIA)',
-        'Price: LKR 30,100.75',
-        'Touring tyre featuring long life, enhanced stability on wet roads, low noise and ride comfort',
-        'The tread compound is a combination of 2 types of special polymer to provide enhanced grip and longer life',
-        'The construction and contact shape have been enhanced to reduce irregular wear and improve handling'
+        'MOBIL Super Extra 4T 10W-40 1L (Semi Synthetic)',
+        'Price: LKR 3,980.00',
+        'Mobil Extra 4T is a high-performance, semi-synthetic blend technology four-stroke motorcycle engine oil developed to provide boosted engine cleanliness and protection for all types of motorcycles and operations',
     ]
     const vehi9 = [
-        '185/65R15 K435 KOREA',
-        'Price: LKR 33,900.25',
-        'Wide lateral grooves incorporated in to the inside blocks deliver hydroplaning resistance for excellent wet handling and braking',
-        'Optimal widths and positioning of the three channel grooves ensures excellent performance in wet driving conditions',
-        'Wide outer grooves provide maximum water evacuation which promotes wet traction keeping the tyre cooler in the dry.'
+        'MOBIL 1 Fully Synthetic 5W-50',
+        'Price: LKR 36,980.00',
+        'Mobil 1 5W-50 Advanced Full Synthetic Motor Oil is our tried and trusted formulation delivering great all-round performance',
+        'Mobil 1 5W-50 keeps your engine performing like new. This race-proven technology is suited for extreme driving conditions and motorsport applications.',
     ]
     const vehi10 = [
-        '205/75R15C 8PRENERGYWAY 11CHINA',
-        'Price: LKR 35,520.00',
-        '.Reinforced structure and special abrasion resistant tread compound deliver extra puncture resistance and load bearing capability with more mileage',
-        '.Continuous tread patterns on shoulder and solid shoulder ribs responsive handling and even wear',
-        '.Three main zigzag grooves combined with lateral blocks provide excellent ride stability and great traction on all kinds of road conditions',
-        '.White sidewall rib shows extraordinary appearance'
+        'MOBIL 1 Fully Synthetic Racing 4T 10W-40',
+        'Price: LKR 36,980.00',
+        'Mobil 1 Racing 4T is an advanced four-stroke motorcycle engine oil. This product helps to provide anoutstanding level of performance in today’s high performance motorcycles',
+        'It will help keep 4-stroke engines running clean protecting even in extreme operating conditions',
     ]
     const vehi11 = [
-        '205/55R16 TOURING VP PLUS',
-        'Price: LKR 37,780.75',
-        'Best selling tyre in Sri Lanka'
+        'MOBIL Mineral Multigrade Super 4T 20W-50',
+        'Price: LKR 3,980.00',
+        'Mobil Super 4T 20W-50 is a high performance conventional four-stroke motorcycle engine oil primarily intended for general use in all types of four-stroke motorcycles and engines'
     ]
     const vehi12 = [
-        '205/60R16 CHAMPIRO TOURING A/S',
-        'Price: LKR 34,000.25',
-        ':  Champiro Touring A/S is an all-season touring tire designed for the latest passenger cars and crossover vehicles',
-        ' It combines precise handling and control with a quiet and comfortable ride',
-        'Backed by a 60,000 mile limited warranty, the Champiro Touring A/S also delivers great mileage for an outstanding value.'
+        'MOBIL 1 Fully Synthetic 5W-50',
+        'Price: LKR 36,980.00',
+        'Mobil 1 5W-50 Advanced Full Synthetic Motor Oil is our tried and trusted formulation delivering great all-round performance',
+        'Mobil 1 5W-50 keeps your engine performing like new',
+        'This race-proven technology is suited for extreme driving conditions and motorsport applications',
+        'Racing or normal driving, Mobil 1 5W-50 (Rally Formula) helps to provide heavy-duty engine performance and protection for an outstanding driving experience'
     ]
     const vehi13 = [
-        '215/60R17 SPEEDWAY CHINA',
-        'Price: LKR 34,520.00',
-        'Four wide circumferential tread grooves deliver the ride stability and offer excellent performance on wet conditions. Improved grooves and bead profile design offer better ride stability, endurance and handling performance',
-        'The open shoulder grooves prevent aquaplaning with enhanced wet grip performance and provide excellent water evacuation.Continuous tread blocks on both shoulder give great support to enhance the ride stability when cornering',
-        'Variable pitch pattern and solid center ribs improve the ride stability, reduce the noise and deliver a comfortable ride',
-        'High-density sipes with special compound deliver a smooth ride and improve traction on dry and wet roads. Jointless nylon band and strong structure design provided the strong carcass to enhance the reliability and Durability'
+        'MOBIL 1 Fully Synthetic 0W-40',
+        'Price: LKR 38,870.00',
+        'Mobil 1™ 0W-40 European Car Formula (North America) or Protection Formula (rest of the World) Advanced Full Synthetic Motor Oil is engineered for the latest gasoline and diesel (without Diesel Particulate Filters or DPFs) engine technology delivering excellent all-round performance. It provides exceptional cleaning power',
+        'wear protection and overall performance. Mobil 1 0W-40 keeps your engine running like new in all driving conditions',
+    
     ]
     const vehi14 = [
-        '215/45R17SPORTSWAY (CHINA)',
-        'Price: LKR 27,480.75',
-        'Four wide circumferential tread grooves deliver the ride stability and offer excellent performance on wet conditions. Improved grooves and bead profile design offer better ride stability, endurance and handling performance',
-        'The open shoulder grooves prevent aquaplaning with enhanced wet grip performance and provide excellent water evacuation.Continuous tread blocks on both shoulder give great support to enhance the ride stability when cornering',
-        'Variable pitch pattern and solid center ribs improve the ride stability, reduce the noise and deliver a comfortable ride',
-        'High-density sipes with special compound deliver a smooth ride and improve traction on dry and wet roads. Jointless nylon band and strong structure design provided the strong carcass to enhance the reliability and Durability'
+        'MOBIL ATF 3309 1L',
+        'Price: LKR 5,980.00',
+        'Mobil ATF™ 3309 is an exceptionally high-performance lubricant that meets original equipment manufacturers’ specifications for use in certain slip-controlled lock-up automatic transmissions',
     ]
     const vehi15 = [
-        '215/65R16SP LM705 JAPAN',
-        'Price: LKR 67,900.25',
-        'The SP Sport LM704 is the ideal tyre for a wide range of cars with high levels of handling, low noise and excellent wet grip',
-        'Delivering improved tread wear thanks to a new innovative silica tread compound and expanded contact area on the road, means you get value for money coupled with performance '
+        'MOBIL Mineral Multigrade Super 4T 20W-50',
+        'Price: LKR 3,980.00',
+        'Mobil Super 4T 20W-50 is a high performance conventional four-stroke motorcycle engine oil primarily intended for general use in all types of four-stroke motorcycles and engines',
     ]
     const vehi16 = [
         '195/55R15 SPORTSWAY',
@@ -248,7 +240,7 @@ function OilComparision() {
     return (
         <div className="tier-main-div">
             <div className="tier-inner-div">
-                <h2 className="tier-h2">Find Your Tire</h2>
+                <h2 className="tier-h2">Find Your Oil</h2>
                 <label htmlFor="dropdown" className='labelHead'>Select Your Car</label>
                 <select id="dropdown" value={selectedOption} onChange={handleDropdownChange}>
                     <option value="">--Please choose an option--</option>
@@ -363,6 +355,8 @@ function OilComparision() {
                                 <div className="tier-features">Other details:</div>
                                 <div className="tier-features"> {vehi5[1]}</div>
                                 <div className="tier-features"> {vehi5[2]}</div>
+                                <div className="tier-features"> {vehi5[3]}</div>
+                                <div className="tier-features"> {vehi5[4]}</div>
                             </div>
                         </card>
                         <card className="card-view-tier">
@@ -378,8 +372,6 @@ function OilComparision() {
                                 <div className="tier-features">{vehi6[1]}</div>
                                 <div className="tier-features">{vehi6[2]}</div>
                                 <div className="tier-features">{vehi6[3]}</div>
-                                <div className="tier-features">{vehi6[4]}</div>
-                                <div className="tier-features">{vehi6[5]}</div>
                             </div>
                         </card>
                     </div>
@@ -413,8 +405,6 @@ function OilComparision() {
                                 <div className="tier-features">Other details:</div>
                                 <div className="tier-features"> {vehi8[1]}</div>
                                 <div className="tier-features"> {vehi8[2]}</div>
-                                <div className="tier-features"> {vehi8[3]}</div>
-                                <div className="tier-features"> {vehi8[4]}</div>
                             </div>
                         </card>
                         <card className="card-view-tier">
@@ -549,13 +539,13 @@ function OilComparision() {
                                     height='250px' />
                             </div>
                             <div className="tier-details">
-                                <div className="tier-features">Name : {vehi16[0]}</div>
+                                <div className="tier-features">Name : {vehi3[0]}</div>
                                 <div className="tier-features">Other details:</div>
-                                <div className="tier-features">{vehi16[1]}</div>
-                                <div className="tier-features">{vehi16[2]}</div>
-                                <div className="tier-features">{vehi16[3]}</div>
-                                <div className="tier-features">{vehi16[4]}</div>
-                                <div className="tier-features">{vehi16[5]}</div>
+                                <div className="tier-features">{vehi3[1]}</div>
+                                <div className="tier-features">{vehi3[2]}</div>
+                                <div className="tier-features">{vehi3[3]}</div>
+                                <div className="tier-features">{vehi3[4]}</div>
+                                <div className="tier-features">{vehi3[5]}</div>
                             </div>
                         </card>
                         <card className="card-view-tier">
@@ -566,10 +556,11 @@ function OilComparision() {
                                     height='250px' />
                             </div>
                             <div className="tier-details">
-                                <div className="tier-features">Name : {vehi17[0]}</div>
+                                <div className="tier-features">Name : {vehi14[0]}</div>
                                 <div className="tier-features">Other details:</div>
-                                <div className="tier-features"> {vehi17[1]}</div>
-                                <div className="tier-features"> {vehi17[2]}</div>
+                                <div className="tier-features"> {vehi14[1]}</div>
+                                <div className="tier-features"> {vehi14[2]}</div>
+                                <div className="tier-features"> {vehi14[3]}</div>
                             </div>
                         </card>
                         <card className="card-view-tier">
@@ -580,12 +571,12 @@ function OilComparision() {
                                     height='250px' />
                             </div>
                             <div className="tier-details">
-                                <div className="tier-features">Name : {vehi18[0]}</div>
+                                <div className="tier-features">Name : {vehi15[0]}</div>
                                 <div className="tier-features">Other details:</div>
-                                <div className="tier-features">{vehi18[1]}</div>
-                                <div className="tier-features">{vehi18[2]}</div>
-                                <div className="tier-features">{vehi18[3]}</div>
-                                <div className="tier-features">{vehi18[4]}</div>
+                                <div className="tier-features">{vehi15[1]}</div>
+                                <div className="tier-features">{vehi15[2]}</div>
+                                <div className="tier-features">{vehi15[3]}</div>
+                                <div className="tier-features">{vehi15[4]}</div>
                             </div>
                         </card>
                     </div>
@@ -600,10 +591,12 @@ function OilComparision() {
                                     height='250px' />
                             </div>
                             <div className="tier-details">
-                                <div className="tier-features">Name : {vehi19[0]}</div>
+                                <div className="tier-features">Name : {vehi1[0]}</div>
                                 <div className="tier-features">Other details:</div>
-                                <div className="tier-features">{vehi19[1]}</div>
-                                <div className="tier-features">{vehi19[2]}</div>
+                                <div className="tier-features">{vehi1[1]}</div>
+                                <div className="tier-features">{vehi1[2]}</div>
+                                <div className="tier-features">{vehi1[3]}</div>
+                                <div className="tier-features">{vehi1[4]}</div>
                             </div>
                         </card>
                         <card className="card-view-tier">
@@ -614,10 +607,12 @@ function OilComparision() {
                                     height='250px' />
                             </div>
                             <div className="tier-details">
-                                <div className="tier-features">Name : {vehi20[0]}</div>
+                                <div className="tier-features">Name : {vehi7[0]}</div>
                                 <div className="tier-features">Other details:</div>
-                                <div className="tier-features"> {vehi20[1]}</div>
-                                <div className="tier-features"> {vehi20[2]}</div>
+                                <div className="tier-features"> {vehi7[1]}</div>
+                                <div className="tier-features"> {vehi7[2]}</div>
+                                <div className="tier-features"> {vehi7[3]}</div>
+                                <div className="tier-features"> {vehi7[4]}</div>
                             </div>
                         </card>
                         <card className="card-view-tier">
@@ -628,11 +623,13 @@ function OilComparision() {
                                     height='250px' />
                             </div>
                             <div className="tier-details">
-                                <div className="tier-features">Name : {vehi21[0]}</div>
+                                <div className="tier-features">Name : {vehi8[0]}</div>
                                 <div className="tier-features">Other details:</div>
-                                <div className="tier-features">{vehi21[1]}</div>
-                                <div className="tier-features">{vehi21[2]}</div>
-                                <div className="tier-features">{vehi21[3]}</div>
+                                <div className="tier-features">{vehi8[1]}</div>
+                                <div className="tier-features">{vehi8[2]}</div>
+                                <div className="tier-features">{vehi8[3]}</div>
+                                <div className="tier-features">{vehi8[4]}</div>
+                                <div className="tier-features">{vehi8[5]}</div>
                             </div>
                         </card>
                     </div>
