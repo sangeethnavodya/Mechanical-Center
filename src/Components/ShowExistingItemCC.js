@@ -33,6 +33,11 @@ const ShowExistingItemCC = () => {
         }
         fetchData()
     }, []);
+    function handleBuy(row) {
+        console.log(row)
+        localStorage.setItem('item_id',row._id)
+        navigate('/buy')
+    }
 
     const cardViews = items.map((shop, index) => (
         <div className="card" key={index}>
@@ -41,14 +46,14 @@ const ShowExistingItemCC = () => {
                 <h4 className="item-desc">{shop.Description}</h4>
                 <h4 className="item-price">Rs. {shop.Price}</h4>
                 <h4 className="item-name">{shop.Name}</h4>
-                <button className='button'>Buy</button>
+                <button className='button' onClick={() => handleBuy(shop)}>Buy</button>
             </div>
         </div>
     ));
     return (
         <div>
             <div className='iconLogo' style={{ display: 'flex', alignItems: 'center' }}>
-                <img src={shops} alt="shop" className="item-img-logo" style={{width:"100px"}} />
+                <img src={shops} alt="shop" className="item-img-logo" style={{ width: "100px" }} />
                 <h1 className='shop_name'>{title}</h1>
             </div>
 

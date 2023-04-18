@@ -70,7 +70,7 @@ function UpdatingForm() {
     return (
         <form className='main'>
             <div className='topic'>
-                <h3>Fuel Station Adding Form</h3>
+                <h3 className='fuel-add-home-update'>Fuel Station Adding Form</h3>
             </div>
             <div>
                 <label>Fuel Station Name</label>

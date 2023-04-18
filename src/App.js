@@ -31,6 +31,7 @@ import CurrentLocationShopPage from './Screens/ShopLocating/LocateShopPage';
 import NearmeShop from './Components/locateShop/NearmeShop';
 import TirePage from './Screens/Tire/TirePage';
 import OilComparision from './Components/Oil/OilComparision';
+import Buy from './Components/Buy/Buy';
 
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
         <Route path='/nearShop' element={<NearmeShop/>}/>
         <Route path='/tireCompare' element={<TirePage/>}/>
         <Route path='/oilCompare' element={<OilComparision/>}/>
+        <Route path='/buy' element={<Buy/>}/>
         
       </Routes>
     </div>

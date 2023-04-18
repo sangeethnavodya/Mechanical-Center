@@ -241,7 +241,7 @@ function OilComparision() {
         <div className="tier-main-div">
             <div className="tier-inner-div">
                 <h2 className="tier-h2">Find Your Oil</h2>
-                <label htmlFor="dropdown" className='labelHead'>Select Your Car</label>
+                <label htmlFor="dropdown" className='labelHead-oil'>Select Your Car</label>
                 <select id="dropdown" value={selectedOption} onChange={handleDropdownChange}>
                     <option value="">--Please choose an option--</option>
                     <option value="Maruti WagonR">Maruti WagonR</option>
