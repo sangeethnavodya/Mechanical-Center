@@ -52,6 +52,7 @@ function Sign() {
                         console.log(response.data.message)
                         if (response.data.message === 'You cannot register again as an admin.') {
                             setalready(true)
+                            navigate('/signin')
                         }
                         else {
                             setalready(false)
@@ -67,6 +68,7 @@ function Sign() {
                 axios.post('http://localhost:4000/register/customer', formData)
                     .then(response => {
                         console.log(response);
+                        navigate('/signin')
                         // Handle success response
                     })
                     .catch(error => {
