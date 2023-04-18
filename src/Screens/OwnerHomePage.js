@@ -9,7 +9,6 @@ export default class OwnerHomePage extends Component {
         return (
             <div>
             <Navbar/>
-            <Animation/>
             <OwnerHome/>
             </div>
         )

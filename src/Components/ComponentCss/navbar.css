@@ -25,3 +25,6 @@ nav {
   nav a:hover {
     text-decoration: underline;
   }
+  .create-shop-title{
+    color: #fff;
+  }
