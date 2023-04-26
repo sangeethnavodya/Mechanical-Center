@@ -76,3 +76,19 @@ button.Add:hover {
   .item-desc-review{
     color: #4267B2;
   }
+
+  .name-review{
+    margin-left: 200px;
+    
+  }
+  .star-review{
+    margin-left: 400px;
+    margin-bottom: 50px;
+    display: flex;
+  }
+  .card-container-review{
+    display:flex;
+  }
+  .btnUpdate{
+    margin-right: 10px;
+  }
