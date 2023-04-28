@@ -32,6 +32,8 @@ import NearmeShop from './Components/locateShop/NearmeShop';
 import TirePage from './Screens/Tire/TirePage';
 import OilComparision from './Components/Oil/OilComparision';
 import Buy from './Components/Buy/Buy';
+import AdminHomeNew from './Components/AdminHome/AdminHome';
+import ShopCount from './Components/AdminHome/ShopCount';
 
 
 function App() {
@@ -40,7 +42,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/signin' element={<SignPage />} />
-        <Route path='/adminHome' element={<AdminHomePage />} />
+        <Route path='/adminHomeFuel' element={<AdminHomePage />} />
+        <Route path='/adminHome' element={<AdminHomeNew/>} />
         <Route path='/updateFuelStation' element={<UpdatingFuelStationPage />} />
         <Route path='/ownerHome' element={<OwnerHomePage />} />
         <Route path='/createShop' element={<CreateShopPage />} />
@@ -67,6 +70,7 @@ function App() {
         <Route path='/tireCompare' element={<TirePage/>}/>
         <Route path='/oilCompare' element={<OilComparision/>}/>
         <Route path='/buy' element={<Buy/>}/>
+        <Route path='/shopCount' element={<ShopCount/>}/>
         
       </Routes>
     </div>
