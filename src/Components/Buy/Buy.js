@@ -1,6 +1,8 @@
+import { Card, Input, Space, Typography } from "antd";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+const { Text, Link } = Typography;
 let c = 0;
 
 
@@ -63,6 +65,18 @@ function Buy() {
                         Item count {count}
                         <button onClick={handleAdd}>Add Item</button>
                     </div>
+                    <Space direction="vertical">
+                        <Card>
+                           <Text>Card Number</Text>
+                           <Input type="text"/>
+                           <Text>Expire Date</Text>
+                           <Input type="date"/>
+
+                           <Text>MVC</Text>
+                           <Input type="number"/>
+
+                        </Card>
+                    </Space>
                     <button onClick={handleBuy}>
                         Buy
                     </button>

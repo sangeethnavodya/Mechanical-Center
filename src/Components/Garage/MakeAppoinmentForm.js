@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import ExisitngFuelStation from '../ExistingFuelStation';
 import emailjs from '@emailjs/browser';
 import './GarageCSS/appoinment.css'
+import { Button, Input } from 'antd';
+import jsPDF from 'jspdf';
 
 function MakeAppoinmentForm() {
     const [selectedOption, setSelectedOption] = useState("Please choose an option");
@@ -30,21 +32,35 @@ function MakeAppoinmentForm() {
 
     useEffect(() => {
         async function fetchStations() {
-          const response = await axios.get(`http://localhost:4000/register/getAService/${localStorage.getItem('service_id')}`);
-          setService(response.data);
+            const response = await axios.get(`http://localhost:4000/register/getAService/${localStorage.getItem('service_id')}`);
+            setService(response.data);
         }
         fetchStations();
-      }, []);
+    }, []);
+    const generatePDF = () => {
+        var doc = new jsPDF({
+            orientation: "landscape", // set the orientation to landscape
+            unit: "pt", // set the unit to points
+            format: "a3", // set the page format to A4
+            width: 1500 // set the width to 800 points
+        });
+        doc.html(document.querySelector("#pdf"), {
+            callback: function(pdf) {
+                pdf.save("mypdf.pdf");
+            }
+        });
+    }
 
 
     return (
         <div>
             <h2 className='head-makeappointment'>Make Your Appoinment</h2>
+            <div id='pdf'>
             <card className='class-makeappoinment card-whatsapp'>
                 <div>
                     <h2 className='topic-appoinment'>{service.ServiceType}</h2>
                     <h2 className='topic-appoinment'>{service.owner_email}</h2>
-                
+
                 </div>
             </card>
             <form ref={form} onSubmit={sendEmail}>
@@ -54,8 +70,15 @@ function MakeAppoinmentForm() {
                 <input type="email" name="user_email" />
                 <label>Message</label>
                 <textarea name="message" />
-                <input type="submit" value="Send" />
+                <label>Date</label>
+                <Input type="date" name="user_email" />
+                <input type="submit" value="Send" /> 
             </form>
+                          
+            </div>
+            <Button onClick={generatePDF} className='pdf-download' style={{
+                display: 'flex', justifyContent: 'center', alignItems: 'center',marginLeft:"600px",marginBottom:"50px"
+            }}>Download Report</Button>
         </div>
 
     )

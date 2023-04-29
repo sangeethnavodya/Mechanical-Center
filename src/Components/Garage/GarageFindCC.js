@@ -4,6 +4,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import './GarageCSS/garage.css'
 
 function GarageFindCC() {
+
     const navigate = useNavigate();
     function handleDelete(event) {
         console.log(event)

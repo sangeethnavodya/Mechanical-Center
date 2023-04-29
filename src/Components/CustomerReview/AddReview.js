@@ -2,17 +2,18 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import './CustomerReviewCSS/review.css'
 import ExisitngCustomerReview from "./ExistingCustomerReview";
+import { Rate } from "antd";
 
 function AddReview() {
     const [formData, setFormData] = useState({
         Review: "",
         Shop_id: localStorage.getItem('shop_id'),
         Customer_Name: localStorage.getItem('customer_name'),
-        star:0
+        star: 0
     });
     const [nameValue, setnameValue] = useState('')
     const [reviewAdded, setReviewAdded] = useState(false)
-    const [selectedOption, setSelectedOption] = useState("Rate this shop");
+    const [selectedOption, setSelectedOption] = useState(0);
 
     useEffect(() => {
         if (reviewAdded) {
@@ -32,7 +33,8 @@ function AddReview() {
     }
 
     function handleDropdownChange(event) {
-        const provinceValue = event.target.value;
+        const provinceValue = event;
+        console.log(event)
         setSelectedOption(provinceValue);
 
         setFormData((prev) => {
@@ -54,7 +56,8 @@ function AddReview() {
             });
         setnameValue('')
     }
-
+    const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
+    const [value, setValue] = useState(1);
     return (
         <div>
             <ExisitngCustomerReview key={reviewAdded} />
@@ -66,16 +69,10 @@ function AddReview() {
                     <label className='labelHead-review'>Add A Review</label>
                     <input type="text" name='Review' onChange={handleInputChange} value={nameValue} />
                 </div>
-                <label htmlFor="dropdown" className='labelHead'>Rate this shop</label>
-                <select id="dropdown" value={selectedOption} onChange={handleDropdownChange}>
-                    <option value="">--Please choose an option--</option>
-                    <option value="1">1 star</option>
-                    <option value="2">2 star</option>
-                    <option value="3">3 star</option>
-                    <option value="4">4 star</option>
-                    <option value="5">5 star</option>
-                    <option value="6">6 star</option>
-                </select>
+                <span>
+                    <Rate tooltips={desc} onChange={handleDropdownChange} value={selectedOption} />
+                    {selectedOption ? <span className="ant-rate-text">{desc[selectedOption - 1]}</span> : ''}
+                </span>
                 <div className='form--review'>
                     <button className='Add Station' onClick={handleSubmit}>Add Review</button>
                 </div>
