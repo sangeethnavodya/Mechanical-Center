@@ -35,6 +35,8 @@ import Buy from './Components/Buy/Buy';
 import AdminHomeNew from './Components/AdminHome/AdminHome';
 import ShopCount from './Components/AdminHome/ShopCount';
 import ShopCC from './Components/Shop/ShopCC';
+import CurrentLocationForGarage from './Components/Garage/locateGarage';
+import NearmeGarage from './Components/Garage/NearMeGarage';
 
 
 function App() {
@@ -72,6 +74,8 @@ function App() {
         <Route path='/oilCompare' element={<OilComparision/>}/>
         <Route path='/buy' element={<Buy/>}/>
         <Route path='/shopCount' element={<ShopCount/>}/>
+        <Route path='/locateGarage' element={<CurrentLocationForGarage/>}/>
+        <Route path='/nearGarage' element={<NearmeGarage/>}/>
         
       </Routes>
     </div>

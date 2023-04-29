@@ -58,6 +58,14 @@ function CustomerHome() {
                     </a>
                     </Card>
                 </Space>
+                <Space direction='horizontal' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '60px', marginTop: '50px' }}>
+                    <Card style={{ width: '430px' }}>
+                    <a className='card' href='/locateGarage'>
+                        <h3>Locate Garage</h3>
+                    </a>
+                    </Card>
+                  
+                </Space>
                 
             </Space>
         </div>

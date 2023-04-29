@@ -5,14 +5,23 @@ import ExisitngFuelStation from '../ExistingFuelStation';
 
 function CreateServiceForm() {
     const [selectedOption, setSelectedOption] = useState("Please choose an option");
-    const [selectedOptionDistrict,setSelectedOptionDistrict]=useState("Please choose an option")
+    const [selectedOptionP, setSelectedOptionP] = useState("Please choose an option");
+    const [selectedOptionD, setSelectedOptionD] = useState("Please choose an option");
+    const [selectedOptionDistrict, setSelectedOptionDistrict] = useState("Please choose an option")
     const [formData, setFormData] = useState({
         owner_id: localStorage.getItem('owner_id'),
-        owner_email:localStorage.getItem('owner_email'),
+        owner_email: localStorage.getItem('owner_email'),
         SName: "",
         CName: "",
-        ServiceType:""
+        ServiceType: "",
+        province: "",
+        district: ""
     });
+    const District = ['--Please choose an option--', 'Colombo', 'Gampaha', ' Kalutara', ' Kandy',
+        ' Matale', 'Nuwara Eliya', 'Galle', 'Matara', 'Hambantota', 'Jaffna', 'Kilinochchi', 'Mannar',
+        'Vavuniya', 'Mullaitivu', 'Batticaloa', 'Ampara', 'Trincomalee', 'Kurunegala', 'Puttalam',
+        'Anuradhapura', 'Polonnaruwa', 'Badulla', 'Moneragala', 'Ratnapura', 'Kegalle'
+    ];
     const navigate = useNavigate();
     const [nameValue, setnameValue] = useState('')
     const [CompanyNameValue, setCompanyNameValue] = useState('')
@@ -43,14 +52,26 @@ function CreateServiceForm() {
         });
     }
 
-    function handleProvince(event){
-        const DistrictValue=event.target.value
-        setSelectedOptionDistrict(DistrictValue);
+    function handleDropdownProvinceChange(event) {
+        const provinceValue = event.target.value;
+        console.log('e')
+        setSelectedOptionP(provinceValue);
 
         setFormData((prev) => {
-            return { ...prev, District: DistrictValue };
+            return { ...prev, province: provinceValue };
         });
     }
+    function handleDistrict(event) {
+        const provinceValue = event.target.value;
+        setSelectedOptionD(provinceValue);
+
+        setFormData((prev) => {
+            return { ...prev, district: provinceValue };
+        });
+    }
+
+
+
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -60,7 +81,7 @@ function CreateServiceForm() {
             .then(response => {
                 console.log(response.data);
                 // Handle success response
-                if(response.data.massage==='Service added'){
+                if (response.data.massage === 'Service added') {
                     navigate('/ownerHome')
                 }
             })
@@ -92,6 +113,24 @@ function CreateServiceForm() {
                     <label className='labelHead'>Company Name</label>
                     <input type="text" name='CName' onChange={handleInputChange} value={CompanyNameValue} />
                 </div>
+                <label htmlFor="dropdown" className='labelHead'>Province</label>
+                <select id="dropdown" value={selectedOptionP} onChange={handleDropdownProvinceChange}>
+                    <option value="">--Please choose an option--</option>
+                    <option value="Western Province">Western Province</option>
+                    <option value="Southern Province">Southern Province</option>
+                    <option value="Central Province">Central Province</option>
+                    <option value="Uva Province">Uva Province</option>
+                    <option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
+                    <option value="Nothern Province">Nothern Province</option>
+                </select>
+                <label htmlFor="dropdown" className='labelHead'>District</label>
+                <select id="dropdown" value={selectedOptionD} onChange={handleDistrict}>
+                    {District.map((option, index) => (
+                        <option key={index} value={option}>
+                            {option}
+                        </option>
+                    ))}
+                </select>
                 <label htmlFor="dropdown" className='labelHead'>Service Type</label>
                 <select id="dropdown" value={selectedOption} onChange={handleDropdownChange}>
                     <option value="">--Please choose an option--</option>
