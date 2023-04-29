@@ -3,15 +3,16 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../Components/ComponentCss/existingShop.css'
 
-const ShopList = () => {
+const ShopList = (Prop) => {
   const [shops, setShops] = useState([]);
   const navigate = useNavigate();
+  console.log(Prop)
   useEffect(() => {
     // Fetch shop data from API on component mount
-    axios.get('http://localhost:4000/shop/find')
+    axios.get('http://localhost:4000/shop/type/'+Prop.data)
       .then((response) => {
         console.log(response)
-        setShops(response.data.massage)
+        setShops(response.data.result)
       })
       .catch((error) => {
         console.log(error);

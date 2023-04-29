@@ -5,7 +5,8 @@ import { Navigate, useNavigate } from 'react-router-dom';
 
 function CreateShopForm() {
   const [image, setImage] = useState(null);
-  const [title, setTitle] = useState(null)
+  const [title, setTitle] = useState(null);
+  const [type,setType]=useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -28,6 +29,7 @@ function CreateShopForm() {
       formData.append('province',selectedOption)
       formData.append('district',selectedOptionDistrict)
       formData.append('ownerId',localStorage.getItem('owner_id'))
+      formData.append('type',type)
       console.log(formData)
 
       await axios.post('http://localhost:4000/shop/create', formData);
@@ -50,6 +52,10 @@ function CreateShopForm() {
     const provinceValue = event.target.value;
     setSelectedOption(provinceValue);
   }
+  function handleDropdownTypeChange(event){
+    const provinceValue = event.target.value;
+    setType(provinceValue);
+  }
 
   const handleImageChange = (event) => {
     setImage(event.target.files[0]);
@@ -68,6 +74,14 @@ function CreateShopForm() {
           <label className='labelHead-form-shop'>Shop Name</label>
           <input type="email" name="Email" className="FormControl-form-shop" placeholder="Enter Name" onChange={handleTitleChange} />
         </div>
+
+        <label htmlFor="dropdown" className='labelHead-form-shop'>Shop Type</label>
+        <select id="dropdown-form-shop" value={type} onChange={handleDropdownTypeChange}>
+          <option value="">--Please choose an option--</option>
+          <option value="Tyre">Tyre</option>
+          <option value="Oil">Oil</option>
+          <option value="Battery">Battery</option>
+        </select>
         <label htmlFor="dropdown" className='labelHead-form-shop'>Province</label>
         <select id="dropdown-form-shop" value={selectedOption} onChange={handleDropdownChange}>
           <option value="">--Please choose an option--</option>

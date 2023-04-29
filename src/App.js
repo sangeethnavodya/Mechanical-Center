@@ -34,6 +34,7 @@ import OilComparision from './Components/Oil/OilComparision';
 import Buy from './Components/Buy/Buy';
 import AdminHomeNew from './Components/AdminHome/AdminHome';
 import ShopCount from './Components/AdminHome/ShopCount';
+import ShopCC from './Components/Shop/ShopCC';
 
 
 function App() {
@@ -52,7 +53,7 @@ function App() {
         <Route path='/seeFuel' element={<CFuelStationPage />} />
         <Route path='/itemAddingForm' element={<ItemAddingPage />} />
         <Route path='/shopView' element={<ShopWithItemPage />} />
-        <Route path='/seeShops' element={<ShopHomePageCC />} />
+        <Route path='/seeShops' element={<ShopCC />} />
         <Route path='/shopViewCC' element={<ShopWithItemPageCC />} />
         <Route path='/locateMYFuel' element={<CurrentLocationFormPage />} />
         <Route path='/nearStation' element={<NearMePage />} />
