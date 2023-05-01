@@ -21,6 +21,7 @@ import vehicle19i from '../../Components/Tire/TierImages/Tire and oil/Tire pics/
 import vehicle20i from '../../Components/Tire/TierImages/Tire and oil/Tire pics/pic20.jpg'
 import vehicle21i from '../../Components/Tire/TierImages/Tire and oil/Tire pics/pic21.jpg'
 import '../../Components/Tire/tire.css'
+import { Card, Space } from "antd";
 
 function TireComparision() {
     const [selectedOption, setSelectedOption] = useState("Please choose an option");
@@ -239,7 +240,34 @@ function TireComparision() {
         'The new HP7 series brings about excellent handling, stability and comfort. Increasing the tire grounding area making it more quiet and smooth',
         'Suitable for wet weather.'
     ]
-
+    const vehiE1 = [
+        "1.2-litre",
+        "4-cylinder"
+    ]
+    const vehiE2 = [
+        "1.2-litre/1.5-litre",
+        "4-cylinder"
+    ]
+    const vehiE3 = [
+        "1.5-litre",
+        "4-cylinder"
+    ]
+    const vehiE4 = [
+        "2-litre/1.5-litre",
+        "4-cylinder"
+    ]
+    const vehiE5 = [
+        "2.5-litre",
+        "4-cylinder"
+    ]
+    const vehiE6 = [
+        "1.5-litre",
+        "4-cylinder"
+    ]
+    const vehiE7 = [
+        "1.5-litre",
+        "4-cylinder"
+    ]
     return (
         <div className="tier-main-div">
             <div className="tier-inner-div">
@@ -258,168 +286,284 @@ function TireComparision() {
             </div>
             <div>
                 {vehicle1 &&
-                    <div className="card-view-div">
-                        <card className="card-view-tier">
-                            <div className="image-div">
-                                <img className="image-tier"
-                                    src={vehicle1i}
-                                    width='200px'
-                                    height='250px' />
-                            </div>
-                            <div className="tier-details">
-                                <div className="tier-features">Name : {vehi1[0]}</div>
-                                <div className="tier-features">Other details:</div>
-                                <div className="tier-features"> {vehi1[1]}</div>
-                                <div className="tier-features"> {vehi1[2]}</div>
-                                <div className="tier-features">{vehi1[3]}</div>
-                                <div className="tier-features">{vehi1[4]}</div>
-                                <div className="tier-features">{vehi1[5]}</div>
-                            </div>
-                        </card>
-                        <card className="card-view-tier">
-                            <div className="image-div">
-                                <img className="image-tier"
-                                    src={vehicle2i}
-                                    width='200px'
-                                    height='250px' />
-                            </div>
-                            <div className="tier-details">
-                                <div className="tier-features">Name : {vehi2[0]}</div>
-                                <div className="tier-features">Other details:</div>
-                                <div className="tier-features"> {vehi2[1]}</div>
-                                <div className="tier-features"> {vehi2[2]}</div>
-                            </div>
-                        </card>
-                        <card className="card-view-tier">
-                            <div className="image-div">
-                                <img className="image-tier"
-                                    src={vehicle3i}
-                                    width='200px'
-                                    height='250px' />
-                            </div>
-                            <div className="tier-details">
-                                <div className="tier-features">Name : {vehi3[0]}</div>
-                                <div className="tier-features">Other details:</div>
-                                <div className="tier-features"> {vehi3[1]}</div>
-                                <div className="tier-features"> {vehi3[2]}</div>
-                                <div className="tier-features">{vehi3[3]}</div>
-                                <div className="tier-features">{vehi3[4]}</div>
-                                <div className="tier-features">{vehi3[5]}</div>
-                                <div className="tier-features">{vehi3[6]}</div>
-                                <div className="tier-features">{vehi3[7]}</div>
-                                <div className="tier-features">{vehi3[8]}</div>
-                                <div className="tier-features">{vehi3[9]}</div>
+                    <div>
+                        <Space direction="vertical" style={{
+                            width: "750px"
+                        }}>
+                            <Card style={{
+                                color: "black",
+                                fontSize: "40px",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                fontFamily: "fantasy"
 
-                            </div>
-                        </card>
+                            }}>
+                                Engine
+                            </Card>
+                            <Card style={{
+                                color: "Blue",
+                                fontSize: "40px",
+                                flex: "box",
+
+                            }}>{vehiE1[0]}</Card>
+                            <Card style={{
+                                color: "Blue",
+                                fontSize: "40px",
+                                flex: "box",
+
+                            }}>{vehiE1[1]} </Card>
+                        </Space>
+
+                        <div className="card-view-div">
+                            <card className="card-view-tier">
+                                <div className="image-div">
+                                    <img className="image-tier"
+                                        src={vehicle1i}
+                                        width='200px'
+                                        height='250px' />
+                                </div>
+                                <div className="tier-details">
+                                    <div className="tier-features">Name : {vehi1[0]}</div>
+                                    <div className="tier-features">Other details:</div>
+                                    <div className="tier-features"> {vehi1[1]}</div>
+                                    <div className="tier-features"> {vehi1[2]}</div>
+                                    <div className="tier-features">{vehi1[3]}</div>
+                                    <div className="tier-features">{vehi1[4]}</div>
+                                    <div className="tier-features">{vehi1[5]}</div>
+                                </div>
+                            </card>
+                            <card className="card-view-tier">
+                                <div className="image-div">
+                                    <img className="image-tier"
+                                        src={vehicle2i}
+                                        width='200px'
+                                        height='250px' />
+                                </div>
+                                <div className="tier-details">
+                                    <div className="tier-features">Name : {vehi2[0]}</div>
+                                    <div className="tier-features">Other details:</div>
+                                    <div className="tier-features"> {vehi2[1]}</div>
+                                    <div className="tier-features"> {vehi2[2]}</div>
+                                </div>
+                            </card>
+                            <card className="card-view-tier">
+                                <div className="image-div">
+                                    <img className="image-tier"
+                                        src={vehicle3i}
+                                        width='200px'
+                                        height='250px' />
+                                </div>
+                                <div className="tier-details">
+                                    <div className="tier-features">Name : {vehi3[0]}</div>
+                                    <div className="tier-features">Other details:</div>
+                                    <div className="tier-features"> {vehi3[1]}</div>
+                                    <div className="tier-features"> {vehi3[2]}</div>
+                                    <div className="tier-features">{vehi3[3]}</div>
+                                    <div className="tier-features">{vehi3[4]}</div>
+                                    <div className="tier-features">{vehi3[5]}</div>
+                                    <div className="tier-features">{vehi3[6]}</div>
+                                    <div className="tier-features">{vehi3[7]}</div>
+                                    <div className="tier-features">{vehi3[8]}</div>
+                                    <div className="tier-features">{vehi3[9]}</div>
+
+                                </div>
+                            </card>
+                        </div>
                     </div>
                 }
                 {vehicle2 &&
-                    <div className="card-view-div">
-                        <card className="card-view-tier">
-                            <div className="image-div">
-                                <img className="image-tier"
-                                    src={vehicle4i}
-                                    width='200px'
-                                    height='250px' />
-                            </div>
-                            <div className="tier-details">
-                                <div className="tier-features">Name : {vehi4[0]}</div>
-                                <div className="tier-features">Other details:</div>
-                                <div className="tier-features"> {vehi4[1]}</div>
-                                <div className="tier-features"> {vehi4[2]}</div>
-                                <div className="tier-features">{vehi4[3]}</div>
-                                <div className="tier-features">{vehi4[4]}</div>
-                                <div className="tier-features">{vehi4[5]}</div>
-                            </div>
-                        </card>
-                        <card className="card-view-tier">
-                            <div className="image-div">
-                                <img className="image-tier"
-                                    src={vehicle5i}
-                                    width='200px'
-                                    height='250px' />
-                            </div>
-                            <div className="tier-details">
-                                <div className="tier-features">Name : {vehi5[0]}</div>
-                                <div className="tier-features">Other details:</div>
-                                <div className="tier-features"> {vehi5[1]}</div>
-                                <div className="tier-features"> {vehi5[2]}</div>
-                            </div>
-                        </card>
-                        <card className="card-view-tier">
-                            <div className="image-div">
-                                <img className="image-tier"
-                                    src={vehicle6i}
-                                    width='200px'
-                                    height='250px' />
-                            </div>
-                            <div className="tier-details">
-                                <div className="tier-features">Name : {vehi6[0]}</div>
-                                <div className="tier-features">Other details:</div>
-                                <div className="tier-features">{vehi6[1]}</div>
-                                <div className="tier-features">{vehi6[2]}</div>
-                                <div className="tier-features">{vehi6[3]}</div>
-                                <div className="tier-features">{vehi6[4]}</div>
-                                <div className="tier-features">{vehi6[5]}</div>
-                            </div>
-                        </card>
+                    <div>
+                        <Space direction="vertical" style={{
+                            width: "750px"
+                        }}>
+                            <Card style={{
+                                color: "black",
+                                fontSize: "40px",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                fontFamily: "fantasy"
+
+                            }}>
+                                Engine
+                            </Card>
+                            <Card style={{
+                                color: "Blue",
+                                fontSize: "40px",
+                                flex: "box",
+
+                            }}>{vehiE2[0]}</Card>
+                            <Card style={{
+                                color: "Blue",
+                                fontSize: "40px",
+                                flex: "box",
+
+                            }}>{vehiE2[1]} </Card>
+                        </Space>
+                        <div className="card-view-div">
+                            <card className="card-view-tier">
+                                <div className="image-div">
+                                    <img className="image-tier"
+                                        src={vehicle4i}
+                                        width='200px'
+                                        height='250px' />
+                                </div>
+                                <div className="tier-details">
+                                    <div className="tier-features">Name : {vehi4[0]}</div>
+                                    <div className="tier-features">Other details:</div>
+                                    <div className="tier-features"> {vehi4[1]}</div>
+                                    <div className="tier-features"> {vehi4[2]}</div>
+                                    <div className="tier-features">{vehi4[3]}</div>
+                                    <div className="tier-features">{vehi4[4]}</div>
+                                    <div className="tier-features">{vehi4[5]}</div>
+                                </div>
+                            </card>
+                            <card className="card-view-tier">
+                                <div className="image-div">
+                                    <img className="image-tier"
+                                        src={vehicle5i}
+                                        width='200px'
+                                        height='250px' />
+                                </div>
+                                <div className="tier-details">
+                                    <div className="tier-features">Name : {vehi5[0]}</div>
+                                    <div className="tier-features">Other details:</div>
+                                    <div className="tier-features"> {vehi5[1]}</div>
+                                    <div className="tier-features"> {vehi5[2]}</div>
+                                </div>
+                            </card>
+                            <card className="card-view-tier">
+                                <div className="image-div">
+                                    <img className="image-tier"
+                                        src={vehicle6i}
+                                        width='200px'
+                                        height='250px' />
+                                </div>
+                                <div className="tier-details">
+                                    <div className="tier-features">Name : {vehi6[0]}</div>
+                                    <div className="tier-features">Other details:</div>
+                                    <div className="tier-features">{vehi6[1]}</div>
+                                    <div className="tier-features">{vehi6[2]}</div>
+                                    <div className="tier-features">{vehi6[3]}</div>
+                                    <div className="tier-features">{vehi6[4]}</div>
+                                    <div className="tier-features">{vehi6[5]}</div>
+                                </div>
+                            </card>
+                        </div>
                     </div>
                 }
                 {vehicle3 &&
-                    <div className="card-view-div">
-                        <card className="card-view-tier">
-                            <div className="image-div">
-                                <img className="image-tier"
-                                    src={vehicle7i}
-                                    width='200px'
-                                    height='250px' />
-                            </div>
-                            <div className="tier-details">
-                                <div className="tier-features">Name : {vehi7[0]}</div>
-                                <div className="tier-features">Other details:</div>
-                                <div className="tier-features"> {vehi7[1]}</div>
-                                <div className="tier-features"> {vehi7[2]}</div>
+                    <div>
+                        <Space direction="vertical" style={{
+                            width: "750px"
+                        }}>
+                            <Card style={{
+                                color: "black",
+                                fontSize: "40px",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                fontFamily: "fantasy"
 
-                            </div>
-                        </card>
-                        <card className="card-view-tier">
-                            <div className="image-div">
-                                <img className="image-tier"
-                                    src={vehicle8i}
-                                    width='200px'
-                                    height='250px' />
-                            </div>
-                            <div className="tier-details">
-                                <div className="tier-features">Name : {vehi8[0]}</div>
-                                <div className="tier-features">Other details:</div>
-                                <div className="tier-features"> {vehi8[1]}</div>
-                                <div className="tier-features"> {vehi8[2]}</div>
-                                <div className="tier-features"> {vehi8[3]}</div>
-                                <div className="tier-features"> {vehi8[4]}</div>
-                            </div>
-                        </card>
-                        <card className="card-view-tier">
-                            <div className="image-div">
-                                <img className="image-tier"
-                                    src={vehicle9i}
-                                    width='200px'
-                                    height='250px' />
-                            </div>
-                            <div className="tier-details">
-                                <div className="tier-features">Name : {vehi9[0]}</div>
-                                <div className="tier-features">Other details:</div>
-                                <div className="tier-features">{vehi9[1]}</div>
-                                <div className="tier-features">{vehi9[2]}</div>
-                                <div className="tier-features">{vehi9[3]}</div>
-                                <div className="tier-features">{vehi9[4]}</div>
-                            </div>
-                        </card>
+                            }}>
+                                Engine
+                            </Card>
+                            <Card style={{
+                                color: "Blue",
+                                fontSize: "40px",
+                                flex: "box",
+
+                            }}>{vehiE3[0]}</Card>
+                            <Card style={{
+                                color: "Blue",
+                                fontSize: "40px",
+                                flex: "box",
+
+                            }}>{vehiE3[1]} </Card>
+                        </Space>
+                        <div className="card-view-div">
+                            <card className="card-view-tier">
+                                <div className="image-div">
+                                    <img className="image-tier"
+                                        src={vehicle7i}
+                                        width='200px'
+                                        height='250px' />
+                                </div>
+                                <div className="tier-details">
+                                    <div className="tier-features">Name : {vehi7[0]}</div>
+                                    <div className="tier-features">Other details:</div>
+                                    <div className="tier-features"> {vehi7[1]}</div>
+                                    <div className="tier-features"> {vehi7[2]}</div>
+
+                                </div>
+                            </card>
+                            <card className="card-view-tier">
+                                <div className="image-div">
+                                    <img className="image-tier"
+                                        src={vehicle8i}
+                                        width='200px'
+                                        height='250px' />
+                                </div>
+                                <div className="tier-details">
+                                    <div className="tier-features">Name : {vehi8[0]}</div>
+                                    <div className="tier-features">Other details:</div>
+                                    <div className="tier-features"> {vehi8[1]}</div>
+                                    <div className="tier-features"> {vehi8[2]}</div>
+                                    <div className="tier-features"> {vehi8[3]}</div>
+                                    <div className="tier-features"> {vehi8[4]}</div>
+                                </div>
+                            </card>
+                            <card className="card-view-tier">
+                                <div className="image-div">
+                                    <img className="image-tier"
+                                        src={vehicle9i}
+                                        width='200px'
+                                        height='250px' />
+                                </div>
+                                <div className="tier-details">
+                                    <div className="tier-features">Name : {vehi9[0]}</div>
+                                    <div className="tier-features">Other details:</div>
+                                    <div className="tier-features">{vehi9[1]}</div>
+                                    <div className="tier-features">{vehi9[2]}</div>
+                                    <div className="tier-features">{vehi9[3]}</div>
+                                    <div className="tier-features">{vehi9[4]}</div>
+                                </div>
+                            </card>
+                        </div>
                     </div>
                 }
                 {vehicle4 &&
+                 <div>
+                 <Space direction="vertical" style={{
+                    width:"750px"
+                 }}>
+                    <Card style={{
+                         color:"black",
+                         fontSize:"40px",
+                         display:"flex",
+                         justifyContent:"center",
+                         alignItems:"center",
+                         fontFamily:"fantasy"
+                         
+                    }}>
+                        Engine
+                    </Card>
+                    <Card style={{
+                        color:"Blue",
+                        fontSize:"40px",
+                        flex:"box",
+                        
+                    }}>{vehiE4[0]}</Card>
+                    <Card style={{
+                        color:"Blue",
+                        fontSize:"40px",
+                        flex:"box",
+                        
+                    }}>{vehiE4[1]} </Card>
+                 </Space>
                     <div className="card-view-div">
-                       <card className="card-view-tier">
+                        <card className="card-view-tier">
                             <div className="image-div">
                                 <img className="image-tier"
                                     src={vehicle10i}
@@ -467,10 +611,39 @@ function TireComparision() {
                             </div>
                         </card>
                     </div>
+                    </div>
                 }
                 {vehicle5 &&
+                 <div>
+                 <Space direction="vertical" style={{
+                    width:"750px"
+                 }}>
+                    <Card style={{
+                         color:"black",
+                         fontSize:"40px",
+                         display:"flex",
+                         justifyContent:"center",
+                         alignItems:"center",
+                         fontFamily:"fantasy"
+                         
+                    }}>
+                        Engine
+                    </Card>
+                    <Card style={{
+                        color:"Blue",
+                        fontSize:"40px",
+                        flex:"box",
+                        
+                    }}>{vehiE5[0]}</Card>
+                    <Card style={{
+                        color:"Blue",
+                        fontSize:"40px",
+                        flex:"box",
+                        
+                    }}>{vehiE5[1]} </Card>
+                 </Space>
                     <div className="card-view-div">
-                       <card className="card-view-tier">
+                        <card className="card-view-tier">
                             <div className="image-div">
                                 <img className="image-tier"
                                     src={vehicle13i}
@@ -520,10 +693,39 @@ function TireComparision() {
                             </div>
                         </card>
                     </div>
+                    </div>
                 }
-                 {vehicle6 &&
+                {vehicle6 &&
+                 <div>
+                 <Space direction="vertical" style={{
+                    width:"750px"
+                 }}>
+                    <Card style={{
+                         color:"black",
+                         fontSize:"40px",
+                         display:"flex",
+                         justifyContent:"center",
+                         alignItems:"center",
+                         fontFamily:"fantasy"
+                         
+                    }}>
+                        Engine
+                    </Card>
+                    <Card style={{
+                        color:"Blue",
+                        fontSize:"40px",
+                        flex:"box",
+                        
+                    }}>{vehiE6[0]}</Card>
+                    <Card style={{
+                        color:"Blue",
+                        fontSize:"40px",
+                        flex:"box",
+                        
+                    }}>{vehiE6[1]} </Card>
+                 </Space>
                     <div className="card-view-div">
-                       <card className="card-view-tier">
+                        <card className="card-view-tier">
                             <div className="image-div">
                                 <img className="image-tier"
                                     src={vehicle16i}
@@ -571,10 +773,39 @@ function TireComparision() {
                             </div>
                         </card>
                     </div>
+                    </div>
                 }
-                   {vehicle7 &&
+                {vehicle7 &&
+                 <div>
+                 <Space direction="vertical" style={{
+                    width:"750px"
+                 }}>
+                    <Card style={{
+                         color:"black",
+                         fontSize:"40px",
+                         display:"flex",
+                         justifyContent:"center",
+                         alignItems:"center",
+                         fontFamily:"fantasy"
+                         
+                    }}>
+                        Engine
+                    </Card>
+                    <Card style={{
+                        color:"Blue",
+                        fontSize:"40px",
+                        flex:"box",
+                        
+                    }}>{vehiE7[0]}</Card>
+                    <Card style={{
+                        color:"Blue",
+                        fontSize:"40px",
+                        flex:"box",
+                        
+                    }}>{vehiE7[1]} </Card>
+                 </Space>
                     <div className="card-view-div">
-                       <card className="card-view-tier">
+                        <card className="card-view-tier">
                             <div className="image-div">
                                 <img className="image-tier"
                                     src={vehicle19i}
@@ -618,7 +849,9 @@ function TireComparision() {
                             </div>
                         </card>
                     </div>
+                    </div>
                 }
+                
             </div>
         </div>
     )
