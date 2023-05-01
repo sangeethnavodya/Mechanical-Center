@@ -26,7 +26,7 @@
 .battery-com {
   color: rgb(21, 22, 22);
   font-size: 20px;
-  width: 300px;
+  width: 500px;
   margin-bottom: 10px;
   border-width: 1px;
   border-color: #0c1416;
@@ -99,5 +99,5 @@
 }
 
 .battery-compare-card {
-  width: 33.33%;
+  width: 50%;
 }

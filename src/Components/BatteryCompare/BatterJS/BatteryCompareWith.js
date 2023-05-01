@@ -9,7 +9,6 @@ function BatteryCompareWith() {
             <div style={{ display: "flex", flexDirection: "row" }}>
                 <BatterComparision style={{ flex: 1, width: "200px" }}  />
                 <BatterComparision style={{ flex: 1, width: "200px" }} />
-                <BatterComparision style={{ flex: 1, width: "200px" }} />
             </div>
 
 
