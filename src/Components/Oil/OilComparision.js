@@ -16,6 +16,7 @@ import vehicle14i from '../../Components/Tire/TierImages/Tire and oil/Oil pics/p
 import vehicle15i from '../../Components/Tire/TierImages/Tire and oil/Oil pics/pic15.png'
 
 import '../../Components/Tire/tire.css'
+import { Card, Space } from "antd";
 
 function OilComparision() {
     const [selectedOption, setSelectedOption] = useState("Please choose an option");
@@ -236,6 +237,34 @@ function OilComparision() {
         'The new HP7 series brings about excellent handling, stability and comfort. Increasing the tire grounding area making it more quiet and smooth',
         'Suitable for wet weather.'
     ]
+    const vehiE1 = [
+        "1.2-litre",
+        "4-cylinder"
+    ]
+    const vehiE2 = [
+        "1.2-litre/1.5-litre",
+        "4-cylinder"
+    ]
+    const vehiE3 = [
+        "1.5-litre",
+        "4-cylinder"
+    ]
+    const vehiE4 = [
+        "2-litre/1.5-litre",
+        "4-cylinder"
+    ]
+    const vehiE5 = [
+        "2.5-litre",
+        "4-cylinder"
+    ]
+    const vehiE6 = [
+        "1.5-litre",
+        "4-cylinder"
+    ]
+    const vehiE7 = [
+        "1.5-litre",
+        "4-cylinder"
+    ]
 
     return (
         <div className="tier-main-div">
@@ -255,6 +284,34 @@ function OilComparision() {
             </div>
             <div>
                 {vehicle1 &&
+                <div>
+                <Space direction="vertical" style={{
+                    width: "750px"
+                }}>
+                    <Card style={{
+                        color: "black",
+                        fontSize: "40px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        fontFamily: "fantasy"
+
+                    }}>
+                        Engine
+                    </Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE1[0]}</Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE1[1]} </Card>
+                </Space>
                     <div className="card-view-div">
                         <card className="card-view-tier">
                             <div className="image-div">
@@ -318,8 +375,37 @@ function OilComparision() {
                             </div>
                         </card>
                     </div>
+                    </div>
                 }
                 {vehicle2 &&
+                <div>
+                <Space direction="vertical" style={{
+                    width: "750px"
+                }}>
+                    <Card style={{
+                        color: "black",
+                        fontSize: "40px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        fontFamily: "fantasy"
+
+                    }}>
+                        Engine
+                    </Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE2[0]}</Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE2[1]} </Card>
+                </Space>
                     <div className="card-view-div">
                         <card className="card-view-tier">
                             <div className="image-div">
@@ -375,8 +461,37 @@ function OilComparision() {
                             </div>
                         </card>
                     </div>
+                    </div>
                 }
                 {vehicle3 &&
+                <div>
+                <Space direction="vertical" style={{
+                    width: "750px"
+                }}>
+                    <Card style={{
+                        color: "black",
+                        fontSize: "40px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        fontFamily: "fantasy"
+
+                    }}>
+                        Engine
+                    </Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE3[0]}</Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE3[1]} </Card>
+                </Space>
                     <div className="card-view-div">
                         <card className="card-view-tier">
                             <div className="image-div">
@@ -424,8 +539,37 @@ function OilComparision() {
                             </div>
                         </card>
                     </div>
+                    </div>
                 }
                 {vehicle4 &&
+                <div>
+                <Space direction="vertical" style={{
+                    width: "750px"
+                }}>
+                    <Card style={{
+                        color: "black",
+                        fontSize: "40px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        fontFamily: "fantasy"
+
+                    }}>
+                        Engine
+                    </Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE4[0]}</Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE4[1]} </Card>
+                </Space>
                     <div className="card-view-div">
                         <card className="card-view-tier">
                             <div className="image-div">
@@ -475,8 +619,37 @@ function OilComparision() {
                             </div>
                         </card>
                     </div>
+                    </div>
                 }
                 {vehicle5 &&
+                <div>
+                <Space direction="vertical" style={{
+                    width: "750px"
+                }}>
+                    <Card style={{
+                        color: "black",
+                        fontSize: "40px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        fontFamily: "fantasy"
+
+                    }}>
+                        Engine
+                    </Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE5[0]}</Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE5[1]} </Card>
+                </Space>
                     <div className="card-view-div">
                         <card className="card-view-tier">
                             <div className="image-div">
@@ -528,8 +701,37 @@ function OilComparision() {
                             </div>
                         </card>
                     </div>
+                    </div>
                 }
                 {vehicle6 &&
+                <div>
+                <Space direction="vertical" style={{
+                    width: "750px"
+                }}>
+                    <Card style={{
+                        color: "black",
+                        fontSize: "40px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        fontFamily: "fantasy"
+
+                    }}>
+                        Engine
+                    </Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE6[0]}</Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE6[1]} </Card>
+                </Space>
                     <div className="card-view-div">
                         <card className="card-view-tier">
                             <div className="image-div">
@@ -580,8 +782,37 @@ function OilComparision() {
                             </div>
                         </card>
                     </div>
+                    </div>
                 }
                 {vehicle7 &&
+                <div>
+                <Space direction="vertical" style={{
+                    width: "750px"
+                }}>
+                    <Card style={{
+                        color: "black",
+                        fontSize: "40px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        fontFamily: "fantasy"
+
+                    }}>
+                        Engine
+                    </Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE7[0]}</Card>
+                    <Card style={{
+                        color: "Blue",
+                        fontSize: "40px",
+                        flex: "box",
+
+                    }}>{vehiE7[1]} </Card>
+                </Space>
                     <div className="card-view-div">
                         <card className="card-view-tier">
                             <div className="image-div">
@@ -633,7 +864,9 @@ function OilComparision() {
                             </div>
                         </card>
                     </div>
+                    </div>
                 }
+            
             </div>
         </div>
     )
