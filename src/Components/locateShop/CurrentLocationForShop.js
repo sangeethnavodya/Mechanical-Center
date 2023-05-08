@@ -66,7 +66,7 @@ function CurrentLocationForShop() {
                         fontSize: "55px",
                         padding:"20px",
                         backgroundColor: "rgba(0, 0, 0, 0.5)",
-                        marginLeft:"25%",
+                        marginLeft:"35%",
                         marginTop:"10%"
                     }}
                 >Locate Me</h3>
