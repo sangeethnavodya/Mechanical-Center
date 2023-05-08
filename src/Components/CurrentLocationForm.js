@@ -76,7 +76,7 @@ function CurrentLocationForm() {
                 >Locate Me</h3>
 
             </div>
-            <form className='main'>
+            <form className='main-current-loc'>
 
                 <div>
                     <label className='labelHead'>Current City</label>

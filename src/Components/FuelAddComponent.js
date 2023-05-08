@@ -25,7 +25,11 @@ function FuelAdd() {
           backgroundColor: `rgba(0, 0, 0, 0.5)`
         }}
       >
-        <text className='fuelText'>Add Fuel Station</text>
+        <h1 className='fuelText' style={{
+          fontFamily:"sans-serif",
+          marginLeft:"40%",
+          fontSize:"50px"
+        }}>Add Fuel Station</h1>
         <img
           className='fuelImage'
           src={imageName}

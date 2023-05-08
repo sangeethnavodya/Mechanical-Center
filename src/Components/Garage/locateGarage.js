@@ -76,7 +76,7 @@ function CurrentLocationForGarage() {
                 >Locate My garage</h3>
 
             </div>
-            <Form className='main'>
+            <Form className='main-current-loc'>
                
                 <div>
                     <label className='labelHead'>Current City</label>

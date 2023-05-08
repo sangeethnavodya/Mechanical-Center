@@ -81,7 +81,7 @@ function FuelStationAddForm() {
     }
     return (
         <div>
-            <form className='main'>
+            <form className='main-current-loc'>
                 <div className='topic'>
                     <h3 className='head'>Fuel Station Adding Form</h3>
                 </div>
@@ -118,6 +118,12 @@ function FuelStationAddForm() {
                     <button className='Add Station' onClick={handleExisting}>Show Exisitng Stations</button>
                 </div>
             </form>
+            <hr class="rounded" style={{
+                  borderTop: "8px solid #bbb",
+                  borderRadius: "5px",
+                  borderBottom:"20px"
+            }}></hr>
+
             <div ref={fuelStationAddFormRef}>
                 {existing && <ExisitngFuelStation />}
             </div>
