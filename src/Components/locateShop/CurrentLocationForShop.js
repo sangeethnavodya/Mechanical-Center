@@ -60,17 +60,14 @@ function CurrentLocationForShop() {
 
                 <h3 className='head'
                     style={{
-                        display: "flex",
                         height:"max-content",
-                        alignItems: "center",
-                        justifyContent: "center",
                         color: "black",
-                        marginLeft: "13%",
-                        marginTop:"5%",
                         fontFamily: "sans-serif",
                         fontSize: "55px",
                         padding:"20px",
-                        backgroundColor: "rgba(0, 0, 0, 0.5)"
+                        backgroundColor: "rgba(0, 0, 0, 0.5)",
+                        marginLeft:"25%",
+                        marginTop:"10%"
                     }}
                 >Locate Me</h3>
 

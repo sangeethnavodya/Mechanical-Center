@@ -56,22 +56,19 @@ function CurrentLocationForGarage() {
 
     }
     return (
-        <div>
+        <div className="locate-div">
             <div className="bg-map" >
 
                 <h3 className='head'
                     style={{
-                        display: "flex",
                         height:"max-content",
-                        alignItems: "center",
-                        justifyContent: "center",
                         color: "black",
-                        marginLeft: "10%",
-                        marginTop:"5%",
                         fontFamily: "sans-serif",
                         fontSize: "55px",
                         padding:"20px",
-                        backgroundColor: "rgba(0, 0, 0, 0.5)"
+                        backgroundColor: "rgba(0, 0, 0, 0.5)",
+                        marginLeft:"20%",
+                        marginTop:"10%"
                     }}
                 >Locate My garage</h3>
 

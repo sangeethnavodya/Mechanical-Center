@@ -25,7 +25,8 @@ function WebHome() {
 
                     }}>Wheee Garage</h1>
                     <div style={{
-                        marginLeft: "700px"
+                        marginLeft: "700px",
+                        marginBottom:"20px"
                     }}>
                         <Button style={{
                             marginLeft: "30px",
@@ -62,15 +63,21 @@ function WebHome() {
                 </Space>
             </div>
 
-            <Space>
-                <p style={{
-                    color: "white",
-                    marginLeft: "30px"
-                }}>We are hear to manage your automobile needs</p>
+            <Space  style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "white"
+            }}>
+                <p>We are here to manage your automobile needs</p>
+
             </Space>
-            <div>
+            <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            }}>
                 <Button style={{
-                    marginLeft: "20px",
                     width: "400px",
                     height: "100px",
                     backgroundColor: "#123456", // set the default background color
