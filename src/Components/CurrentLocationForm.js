@@ -62,12 +62,16 @@ function CurrentLocationForm() {
                 <h3 className='head'
                     style={{
                         display: "flex",
+                        height:"max-content",
                         alignItems: "center",
                         justifyContent: "center",
-                        color:"black",
-                        marginLeft:"13%",
-                        fontFamily:"sans-serif",
-                        fontSize:"55px"
+                        color: "black",
+                        marginLeft: "10%",
+                        marginTop:"5%",
+                        fontFamily: "sans-serif",
+                        fontSize: "55px",
+                        padding:"20px",
+                        backgroundColor: "rgba(0, 0, 0, 0.5)"
                     }}
                 >Locate Me</h3>
 
