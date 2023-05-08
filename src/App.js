@@ -37,13 +37,16 @@ import ShopCount from './Components/AdminHome/ShopCount';
 import ShopCC from './Components/Shop/ShopCC';
 import CurrentLocationForGarage from './Components/Garage/locateGarage';
 import NearmeGarage from './Components/Garage/NearMeGarage';
+import WebHome from './Components/WebHome/WebHome';
 
 
 function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Home />} />
+      WebHome
+        <Route path='/signup' element={<Home />} />
+        <Route path='/' element={<WebHome />} />
         <Route path='/signin' element={<SignPage />} />
         <Route path='/adminHomeFuel' element={<AdminHomePage />} />
         <Route path='/adminHome' element={<AdminHomeNew/>} />

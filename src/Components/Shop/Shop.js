@@ -6,11 +6,11 @@ function Shop() {
     return (
         <div>
             <Space direction="vertical">
-                <Card>
-                    <div style={{width:"1200px",
+                <Card style={{width:"1200px",
                 fontFamily:'cursive',
                 fontSize:"50px"
-                  }}>Tyre Shops</div>
+                  }}>
+                Tyre Shops
                     <ShopList data="Tyre"/>
                 </Card>
                 <Card style={{width:"1200px",
