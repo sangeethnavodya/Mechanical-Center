@@ -26,11 +26,7 @@ function OwnerHome() {
                 </Space>
         
                 <Space direction='horizontal' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '60px', marginTop: '50px' }}>
-                    <Card style={{width:'430px'}}>
-                        <a className='card' href='/garageHome'>
-                            <h3>Create a Garage</h3>
-                        </a>
-                    </Card>
+
                     <Card style={{width:'430px'}}>
                         <a className='card' href='/createdServices'>
                             <h3>Created Services</h3>
