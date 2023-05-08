@@ -7,8 +7,8 @@ export default class CurrentLocationFormPage extends Component {
     render() {
         return (
             <div>
-            <Navbar/>
-            <CurrentLocationForm/>
+            
+                <CurrentLocationForm />
             </div>
         )
     }

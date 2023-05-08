@@ -7,12 +7,12 @@ import { Form } from 'antd';
 function CurrentLocationForGarage() {
     const [selectedOption, setSelectedOption] = useState("Please choose an option");
     const [formData, setFormData] = useState({
-        District:""
+        District: ""
     });
     const navigate = useNavigate();
     const [existing, setexisting] = useState(false)
     const fuelStationAddFormRef = useRef(null);
-    const [selectedOptionDistrict,setSelectedOptionDistrict]=useState("Please choose an option")
+    const [selectedOptionDistrict, setSelectedOptionDistrict] = useState("Please choose an option")
     const province = ['--Please choose an option--', 'Western Province', 'Southern Province', 'Central Province', 'Uva Province',
         'Sabaragamuwa Province', 'Nothern Province'
     ];
@@ -39,31 +39,44 @@ function CurrentLocationForGarage() {
         event.preventDefault();
         console.log(formData)
         console.log(selectedOptionDistrict)
-        axios.get('http://localhost:4000/register/locateMeg/'+selectedOptionDistrict)
+        axios.get('http://localhost:4000/register/locateMeg/' + selectedOptionDistrict)
             .then(response => {
                 console.log(response.data);
                 // Handle success response
-                localStorage.setItem('district_name',selectedOptionDistrict)
+                localStorage.setItem('district_name', selectedOptionDistrict)
                 navigate('/nearGarage')
             })
             .catch(error => {
                 console.log(error);
                 // Handle error response
             });
-    
+
         setSelectedOption('')
         setSelectedOptionDistrict('')
 
     }
     return (
         <div>
+            <div className="bg-map" >
+
+                <h3 className='head'
+                    style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: "black",
+                        marginLeft: "13%",
+                        fontFamily: "sans-serif",
+                        fontSize: "55px"
+                    }}
+                >Locate My garage</h3>
+
+            </div>
             <Form className='main'>
-                <div className='topic'>
-                    <h3 className='head'>Locate My garage</h3>
-                </div>
+               
                 <div>
                     <label className='labelHead'>Current City</label>
-                    <input type="text" name='Name' placeholder='enter your location'/>
+                    <input type="text" name='Name' placeholder='enter your location' />
                 </div>
                 <label htmlFor="dropdown" className='labelHead'>Province</label>
                 <select id="dropdown" value={selectedOption} onChange={handleDropdownChange}>
