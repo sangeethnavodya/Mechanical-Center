@@ -65,7 +65,7 @@ function CurrentLocationForShop() {
                         alignItems: "center",
                         justifyContent: "center",
                         color: "black",
-                        marginLeft: "10%",
+                        marginLeft: "13%",
                         marginTop:"5%",
                         fontFamily: "sans-serif",
                         fontSize: "55px",
