@@ -2,14 +2,17 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../Components/ComponentCss/existingShop.css'
+import { Space } from 'antd';
+import UShop from './Shop/UpdateShop';
 
 const ShopList = (Prop) => {
   const [shops, setShops] = useState([]);
+  const [updateAvailable,setUpdateAvailable]=useState(false);
   const navigate = useNavigate();
   console.log(Prop)
   useEffect(() => {
     // Fetch shop data from API on component mount
-    axios.get('http://localhost:4000/shop/type/'+Prop.data)
+    axios.get('http://localhost:4000/shop/type/' + Prop.data)
       .then((response) => {
         console.log(response)
         setShops(response.data.result)
@@ -46,21 +49,37 @@ const ShopList = (Prop) => {
       });
 
   }
-  function handleOnclickDelete(){
-    
+  function handleOnclickDelete(row) {
+    console.log(row)
+    axios.delete('http://localhost:4000/shop/' + row._id).then(response => {
+      console.log(response.data);
+      window.location.reload();
+      // Handle success response
+    })
+      .catch(error => {
+        console.log(error);
+        // Handle error response
+      });
+  }
+  function handleOnclickUpdate(){
+     setUpdateAvailable(true);
   }
 
   const tableRows = shops.map((row, index) => (
+  
     <tr key={index} className='shop-table-rows'>
       <td className='table-shop-td'>
         <img src={row.image.url} alt="product" width="100" height="100" />
       </td>
       <td className='table-shop-td-name' >{row.title}</td>
       <td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclick(row)}>Add item to shop</button></td>
-      <td className='table-shop-td'><button  className='button-shop' onClick={() => handleOnclickShop(row)}>Show shop</button></td>
+      <td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclickShop(row)}>Show shop</button></td>
       <td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclickDelete(row)}>Delete</button></td>
-
+      {!updateAvailable&&<td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclickUpdate(row)}>Update</button></td>}
+      {updateAvailable&&<UShop data={row}/>}
     </tr>
+      
+    
   ));
   console.log(shops)
   return (
