@@ -44,7 +44,6 @@ function App() {
   return (
     <div>
       <Routes>
-      WebHome
         <Route path='/signup' element={<Home />} />
         <Route path='/' element={<WebHome />} />
         <Route path='/signin' element={<SignPage />} />

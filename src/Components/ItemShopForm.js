@@ -49,7 +49,9 @@ function ItemShopForm() {
         setDescription(event.target.value)
     }
     return (
-        <form className='main'>
+        <form className='main' style={{
+            marginTop:"20%"
+        }}>
             <div className='topic'>
                 <h3 className='create-shop-title'>Add Item To Your Shop</h3>
             </div>

@@ -5,7 +5,8 @@ import BatteryCompareWith from "../../Components/BatteryCompare/BatterJS/Battery
 export default class BatteryComparisionPage extends Component {
     render() {
         return (
-            <div>
+            <div className="bg-image" style={{width:"1600px",
+            height:"100%"}}>
                <BatteryCompareWith/>
             </div>
         )

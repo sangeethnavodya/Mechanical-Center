@@ -34,8 +34,10 @@ const ShowExistingItem = () => {
         fetchData()
     }, []);
     const cardViews = items.map((shop, index) => (
-        <div className="card" key={index}>
-            <img src={shop.image.url} alt="shop" className="item-img" />
+        <div className="card" key={index} >
+            <img src={shop.image.url} alt="shop" className="item-img" style={{
+                marginTop:"2%"
+            }}/>
             <div className="card-container">
                 <h4 className="item-desc">{shop.Description}</h4>
                 <h4 className="item-price">Rs. {shop.Price}</h4>
@@ -47,11 +49,9 @@ const ShowExistingItem = () => {
         
         <div>
             <div className='iconLogo' style={{ display: 'flex', alignItems: 'center' }}>
-                <img src={shops} alt="shop" className="item-img-logo" style={{width:"100px"}} />
+                <img src={shops} alt="shop" className="item-img-logo" style={{width:"100px",marginTop:"2%"}} />
                 <h1 className='shop_name'>{title}</h1>
             </div>
-
-
             <div className="item-grid"> {/* wrap cardViews in a container */}
                 {cardViews}
             </div>

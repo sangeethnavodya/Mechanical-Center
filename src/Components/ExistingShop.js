@@ -72,9 +72,9 @@ const ShopList = (Prop) => {
         <img src={row.image.url} alt="product" width="100" height="100" />
       </td>
       <td className='table-shop-td-name' >{row.title}</td>
-      <td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclick(row)}>Add item to shop</button></td>
-      <td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclickShop(row)}>Show shop</button></td>
-      <td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclickDelete(row)}>Delete</button></td>
+      <td className='table-shop-td' style={{width:"250px"}}><button className='button-shop' onClick={() => handleOnclick(row)}>Add item to shop</button></td>
+      <td className='table-shop-td' style={{width:"150px"}}><button className='button-shop' onClick={() => handleOnclickShop(row)}>Show shop</button></td>
+      <td className='table-shop-td' style={{width:"150px"}}><button className='button-shop' onClick={() => handleOnclickDelete(row)}>Delete</button></td>
       {!updateAvailable&&<td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclickUpdate(row)}>Update</button></td>}
       {updateAvailable&&<UShop data={row}/>}
     </tr>
@@ -91,11 +91,9 @@ const ShopList = (Prop) => {
             <th className='shop-th'>Shop Name</th>
           </tr >
         </thead>
-
         <tbody>
           {tableRows}
         </tbody>
-
       </table>
     </div>
   );

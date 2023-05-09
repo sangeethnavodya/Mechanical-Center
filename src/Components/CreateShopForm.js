@@ -100,7 +100,8 @@ function CreateShopForm() {
             </option>
           ))}
         </select>
-        <label htmlFor="image" className='labelHead-form-shop' >Select an image:</label>
+        {/*<label htmlFor="image" className='labelHead-form-shop' >Select an image:</label>*/}
+        <label className='labelHead-form-shop'>Select an Image</label>
         <input type="file" className='FormControl-form-shop' onChange={handleImageChange} />
         <button className='signup-form-shop' onClick={handleSubmit}>Create Shop</button>
       </div>

@@ -1,7 +1,7 @@
 .WebHome {
     background-image: url('/src/Assests/used-cars-art.jpg');
     width: 100%;
-    height: 2000px;
+    height: 1000px;
     background-repeat: no-repeat;
 }
 
@@ -22,3 +22,10 @@
     background-image: url('/src/Assests/form_locate.jpg');
     font-family: Arial, sans-serif;
   }
+.bg-image{
+    background-image: url('/src/Assests/comparison_back.jpg');
+    background-size: 1600px 2000px;
+    width: 1600px;
+    height: 1600px;
+    background-repeat: no-repeat;
+}

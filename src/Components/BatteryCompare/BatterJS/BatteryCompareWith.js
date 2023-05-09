@@ -4,7 +4,7 @@ import './BatteryCSS/batterycompare.css'
 
 function BatteryCompareWith() {
     return (
-        <div>
+        <div >
             <h2 className="head-battery">Battery Comparision</h2>
             <div style={{ display: "flex", flexDirection: "row" }}>
                 <BatterComparision style={{ flex: 1, width: "500px" }}  />
