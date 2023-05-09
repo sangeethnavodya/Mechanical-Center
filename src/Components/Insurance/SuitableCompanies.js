@@ -2,10 +2,13 @@ import jsPDF from "jspdf";
 import React from "react";
 
 function SuitableCompanies(props) {
+    function redirect(url){
+        window.location.href = url;
+    }
     const { data } = props;
     const tableRows = data.map((row, index) => (
         <tr key={index} className='shop-table-rows'>
-            <td className='table-shop-td'>
+            <td className='table-shop-td' onClick={()=>redirect(row.url)}>
                 <img src={row.image.url} alt="product" width="100" height="100" />
             </td>
             <td className='table-shop-td-name' >{row.title}</td>
