@@ -1,4 +1,4 @@
-import {Button, Input} from "antd";
+import {Button, Input, Space} from "antd";
 import FormItemLabel from "antd/es/form/FormItemLabel";
 import axios from "axios";
 import React, {useState} from "react";
@@ -10,11 +10,19 @@ function UService(props) {
     const [comment1, setComment] = useState({
         SName: props.data.SName,
         CName: props.data.CName,
-        ServiceType: props.data.ServiceType
+        ServiceType: props.data.ServiceType,
+        province:props.data.province,
+        district:props.data.district
     })
 
     const onChange = (event) => {
         setComment({...comment1, "ServiceType": event})
+    };
+    const onChangeV = (event) => {
+        setComment({...comment1, "district": event})
+    };
+    const onChangeP = (event) => {
+        setComment({...comment1, "province": event})
     };
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -51,6 +59,10 @@ function UService(props) {
         // use the value for further processing
         setComment({...comment1, "CName": event.target.value})
     }
+    function handleCancel(){
+        window.location.reload()
+    }
+
 
     return (
         <div style={{
@@ -63,7 +75,7 @@ function UService(props) {
 
                 <Select
                     showSearch
-                    placeholder="Select a person"
+                    placeholder="Select a Type"
                     optionFilterProp="children"
                     onChange={onChange}
                     onSearch={onSearch}
@@ -88,7 +100,104 @@ function UService(props) {
                     width:"100%"
                 }}/>
             </div>
-            <Button onClick={handleSubmit} className='table-shop-td'>Update</Button>
+            <div>
+                <Select
+                    showSearch
+                    placeholder="Select a District"
+                    optionFilterProp="children"
+                    onChange={onChangeV}
+                    onSearch={onSearch}
+                    filterOption={(input, option) =>
+                        (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
+                    }
+                    options={[
+                        {
+                            value: 'Colombo',
+                            label: 'Colombo',
+                        },
+                        {
+                            value: 'Gampaha',
+                            label: 'Gampaha',
+                        },
+                        {
+                            value: 'Kaluthara',
+                            label: 'Kaluthara',
+                        },
+                        {
+                            value: 'Galle',
+                            label: 'Galle',
+                        },
+                        {
+                            value: 'Matara',
+                            label: 'Matara',
+                        },
+                        {
+                            value: 'Hambantota',
+                            label: 'Hambantota',
+                        },
+                        {
+                            value: 'Kandy',
+                            label: 'Kandy',
+                        },
+                        {
+                            value: 'Anuradhapura',
+                            label: 'Anuradhapura',
+                        },
+                        {
+                            value: 'Puttalam',
+                            label: 'Puttalam',
+                        }
+                    ]}
+                    style={{
+                        width:"100%",
+                        marginTop:"10px"
+                    }}/>
+            </div>
+            <div>
+                <Select
+                    showSearch
+                    placeholder="Select a Province"
+                    optionFilterProp="children"
+                    onChange={onChangeP}
+                    onSearch={onSearch}
+                    filterOption={(input, option) =>
+                        (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
+                    }
+                    options={[
+                        {
+                            value: 'Western Province',
+                            label: 'Western Province',
+                        },
+                        {
+                            value: 'Southern Province',
+                            label: 'Southern Province',
+                        },
+                        {
+                            value: 'Central Province',
+                            label: 'Central Province',
+                        },
+
+                        {
+                            value: 'Uva Province',
+                            label: 'Uva Province',
+                        }
+                        ,
+                        {
+                            value: 'Sabaragamuwa Province',
+                            label: 'Sabaragamuwa Province',
+                        }
+
+                    ]}
+                    style={{
+                        width:"100%",
+                        marginTop:"10px"
+                    }}/>
+            </div>
+
+            <Space direction="horizontal">
+                <Button onClick={handleSubmit} className='table-shop-td'>Update</Button>
+                <Button onClick={handleCancel} className='table-shop-td'>Cancel</Button>
+            </Space>
         </div>
     )
 
