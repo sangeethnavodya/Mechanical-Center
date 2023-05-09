@@ -5,25 +5,20 @@ import ShopListCC from "../ExsitingShopCC";
 
 function ShopCC() {
     return (
-        <div>
-            <Space direction="vertical">
+        <div className="vbvbvb">
+            <Space direction="vertical"style={{width:"100%"}}>
                 <Card>
-                    <div style={{width:"1200px",
-                fontFamily:'cursive',
-                fontSize:"50px"
+                    <div style={{width:"100%",
                   }}>Tyre Shops</div>
                     <ShopListCC data="Tyre"/>
                 </Card>
-                <Card style={{width:"1200px",
-                fontFamily:'cursive',
-                fontSize:"50px"
+                <Card style={{width:"100%",
+              
                   }}>
                     Oil Shops
                     <ShopListCC data="Oil"/>
                 </Card>
-                <Card style={{width:"1200px",
-                fontFamily:'cursive',
-                fontSize:"50px"
+                <Card style={{width:"100%",
                   }}>
                     Battery Shops
                     <ShopListCC data="Battery"/>

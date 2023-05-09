@@ -46,6 +46,9 @@ const ShopList = (Prop) => {
       });
 
   }
+  function handleOnclickDelete(){
+    
+  }
 
   const tableRows = shops.map((row, index) => (
     <tr key={index} className='shop-table-rows'>
@@ -55,6 +58,7 @@ const ShopList = (Prop) => {
       <td className='table-shop-td-name' >{row.title}</td>
       <td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclick(row)}>Add item to shop</button></td>
       <td className='table-shop-td'><button  className='button-shop' onClick={() => handleOnclickShop(row)}>Show shop</button></td>
+      <td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclickDelete(row)}>Delete</button></td>
 
     </tr>
   ));

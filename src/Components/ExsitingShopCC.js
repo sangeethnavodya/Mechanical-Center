@@ -62,6 +62,8 @@ const ShopListCC = (Prop) => {
       });
   }
 
+
+
   const tableRows = shops.map((row, index) => (
     <tr key={index}>
       <td className='table-shop-td'>
@@ -70,19 +72,20 @@ const ShopListCC = (Prop) => {
       <td className='table-shop-td-name'>{row.title}</td>
       <td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclickReview(row)}>Add A Review</button></td>
       <td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclickShop(row)}>Show shop</button></td>
+     
+
     </tr>
   ));
   console.log(shops)
   return (
     <div className='shop-main-div'>  
       <table className='shop-main-table'>
-        <thead className='shop-main-head' >
-          <tr className='shop-tr'>
-            <th className='shop-th'>Logo</th>
-            <th className='shop-th'>Shop Name</th>
+        <thead  >
+          <tr >
+            <th className='shop-th' style={{fontSize:"30px",fontFamily:"cursive",width:"20%"}}>Logo</th>
+            <th className='shop-th' style={{fontSize:"30px",fontFamily:"cursive",width:"20%"}}>Shop Name</th>
           </tr>
         </thead>
-
         <tbody>
           {tableRows}
         </tbody>

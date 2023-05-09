@@ -5,22 +5,22 @@ import ShopList from "../ExistingShop";
 function Shop() {
     return (
         <div>
-            <Space direction="vertical">
-                <Card style={{width:"1200px",
+            <Space direction="vertical" style={{width:"100%"}}>
+                <Card style={{
                 fontFamily:'cursive',
                 fontSize:"50px"
                   }}>
                 Tyre Shops
                     <ShopList data="Tyre"/>
                 </Card>
-                <Card style={{width:"1200px",
+                <Card style={{
                 fontFamily:'cursive',
                 fontSize:"50px"
                   }}>
                     Oil Shops
                     <ShopList data="Oil"/>
                 </Card>
-                <Card style={{width:"1200px",
+                <Card style={{
                 fontFamily:'cursive',
                 fontSize:"50px"
                   }}>
