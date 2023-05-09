@@ -37,7 +37,8 @@ function UShop(props) {
     }
     return (
         <div style={{
-            marginLeft:"30px"
+            marginLeft:"30px",
+            marginRight:"10px"
         }}>
             <Input placeholder="Enter New Shop Name" className="comment-input" onChange={handleCaption}  />
             <Button  onClick={handleSubmit} className='table-shop-td' >Update</Button>
