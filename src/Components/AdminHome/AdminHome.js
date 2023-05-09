@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import '../../Components/ComponentCss/ownerHome.css'
 import { Card, Space } from 'antd'
+import Navbar from "../navbar_component";
 
 function AdminHomeNew() {
     return (
         <div>
+            <Navbar/>
             <Space direction='horizontal' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '60px', marginTop: '50px' }}>
                 <Card>
                     <a className='card' href='/adminHomeFuel'>
