@@ -69,7 +69,10 @@ function WebHome() {
                 alignItems: "center",
                 color: "white"
             }}>
-                <p>We are here to manage your automobile needs</p>
+                <p style={{
+                    fontSize:"30px",
+                    fontFamily:"sans-serif"
+                }}>We are here to manage your automobile needs</p>
 
             </Space>
             <div style={{
@@ -78,8 +81,9 @@ function WebHome() {
                 alignItems: "center"
             }}>
                 <Button style={{
-                    width: "400px",
-                    height: "100px",
+                    width: "100px",
+                    height: "50px",
+                    borderRadius:"20px",
                     backgroundColor: "#123456", // set the default background color
                     color: "#ffffff", // set the default text color
                     transition: "background-color 0.3s ease-in-out", // add a smooth transition

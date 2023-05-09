@@ -10,13 +10,19 @@ function SuitableCompanies(props) {
     const tableRows = data.map((row, index) => (
         <Space key={index} direction="vertical" style={{
             marginLeft: "2%",
-            marginTop:"1%"
+            marginTop:"1%",
+            width:"600px",
+            height:"600px"
         }}>
             <Card>
                 <Card onClick={() => redirect(row.url)}>
                     <img src={row.image.url} alt="product" width="200" height="200" />
                 </Card>
-                <Card  >{row.title}</Card>
+                <Card  style={{
+                    marginTop:"1%",
+                    fontFamily:"sans-serif",
+                    fontSize:"20px"
+                }}>{row.title}</Card>
             </Card>
 
         </Space>

@@ -63,7 +63,7 @@ function Buy() {
                     </div>
                     <div className='labelHead-form-buy' >
                         Item count {count}
-                        <button onClick={handleAdd}>Add Item</button>
+                        <button onClick={handleAdd} style={{marginLeft:"10px"}} >Add Item</button>
                     </div>
                     <Space direction="vertical">
                         <Card>
