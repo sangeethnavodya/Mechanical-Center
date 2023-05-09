@@ -50,7 +50,7 @@ function GarageFindCC() {
     
     
     return (
-        <div className="card-list">
+        <div className="card-list" >
             {cardList}
         </div>
     )

@@ -71,7 +71,7 @@ function MakeAppoinmentForm() {
                 <label>Message</label>
                 <textarea name="message" />
                 <label>Date</label>
-                <Input type="date" name="user_email" />
+                <Input type="date" name="date" />
                 <input type="submit" value="Send" /> 
             </form>
                           

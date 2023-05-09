@@ -7,7 +7,7 @@ import TireComparision from "../../Components/Tire/TireComparision";
 export default class OilPage extends Component {
     render() {
         return (
-            <div>
+            <div className= "tier-main-div">
             <Navbar/>
             <OilComparision/>
             </div>

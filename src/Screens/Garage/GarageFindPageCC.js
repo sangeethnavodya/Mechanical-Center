@@ -5,7 +5,7 @@ import GarageFindCC from "../../Components/Garage/GarageFindCC";
 export default class GarageFindPageCC extends Component {
     render() {
         return (
-            <div>
+            <div className=' div-main-service'>
             <GarageFindCC/>
             </div>
         )

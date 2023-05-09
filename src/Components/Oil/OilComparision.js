@@ -267,7 +267,8 @@ function OilComparision() {
     ]
 
     return (
-        <div className="tier-main-div">
+        <div className="tier-main-div" style={{width:"100%",
+            height:"1900px"}}>
             <div className="tier-inner-div">
                 <h2 className="tier-h2">Find Your Oil</h2>
                 <label htmlFor="dropdown" className='labelHead-oil'>Select Your Car</label>
