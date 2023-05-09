@@ -67,7 +67,7 @@ function CurrentLocationForGarage() {
                         fontSize: "55px",
                         padding:"20px",
                         backgroundColor: "rgba(0, 0, 0, 0.5)",
-                        marginLeft:"35%",
+                        marginLeft:"40%",
                         marginTop:"10%"
                     }}
                 >Locate My garage</h3>
