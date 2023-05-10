@@ -8,6 +8,7 @@ function ExisitngCustomerReview() {
     const [review, setReview] = useState([]);
     const [isReview, setIsReview] = useState(false);
     const [update, setUpdate] = useState(false)
+    const [selectedService, setSelectedService] = useState(null);
 
     useEffect(() => {
         async function fetchReviews() {
@@ -30,6 +31,7 @@ function ExisitngCustomerReview() {
         })
     }
     function handleUpdate(r) {
+        setSelectedService(r);
         setUpdate(true)
     }
     function handleReviewUpdate() {
@@ -41,13 +43,13 @@ function ExisitngCustomerReview() {
 
     const cardViews = review?.map((review, index) => (
         <Space className="card-review" key={index} direction="horizontal">
-            <Card className="card-container-review" style={{width:"600px"}}>
+            <Card className="card-container-review" style={{ width: "600px" }}>
                 <Space direction="vertical" >
                     <div className="name-review">
                         <h4 className="item-desc-review-name">{review.Customer_Name}</h4>
                         <h5 className="item-desc-review">{review.Review}</h5>
                     </div>
-                    <div style={{marginLeft:"170px"}}>
+                    <div style={{ marginLeft: "170px" }}>
                         {(review.star == 1) && <div>
                             <img
                                 src={j}
@@ -163,8 +165,12 @@ function ExisitngCustomerReview() {
                     </div>
 
                 </Space>
+                <Space>
+                {update && review.Customer_Name == localStorage.getItem('customer_name') && selectedService === review && <UpdateView data={review} onUpdate={handleReviewUpdate} style={{marginLeft:"20px"}} />}
+            </Space>
             </Card>
-            {update && review.Customer_Name == localStorage.getItem('customer_name') && <UpdateView data={review} onUpdate={handleReviewUpdate} />}
+        
+
         </Space>
     ));
 
