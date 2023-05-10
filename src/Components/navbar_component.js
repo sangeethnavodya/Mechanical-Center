@@ -6,12 +6,15 @@ import {useNavigate} from "react-router-dom";
 export default function Navbar(){
     const navigate=useNavigate();
     function buttonLog(){
-        navigate('/')
+        navigate('/signin')
     }
+    function buttonHome(){
+      navigate('/')
+  }
         return(
             <nav>
             <ul style={{height:"70px"}}>
-              <Button><a href="#">Home</a></Button>
+              <Button onClick={()=>buttonHome()}>Home</Button>
               <Button style={{marginLeft:"30px"}} onClick={()=>buttonLog()}>LogOut</Button>
             </ul>
           </nav>

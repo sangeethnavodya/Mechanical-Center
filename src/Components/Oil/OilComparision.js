@@ -270,9 +270,16 @@ function OilComparision() {
         <div className="tier-main-div" style={{width:"100%",
             height:"1900px"}}>
             <div className="tier-inner-div">
-                <h2 className="tier-h2">Find Your Oil</h2>
-                <label htmlFor="dropdown" className='labelHead-oil'>Select Your Car</label>
-                <select id="dropdown" value={selectedOption} onChange={handleDropdownChange}>
+                <h2 className="tier-h2" style={{
+                    fontSize:"40px",
+                    fontFamily:"sans-serif"
+                }}>Find Your Oil</h2>
+                <label htmlFor="dropdown" className='labelHead-oil' style={{
+                    fontSize:"30px"
+                }}>Select Your Car</label>
+                <select id="dropdown" value={selectedOption} onChange={handleDropdownChange} style={{
+                    marginTop:"30px"
+                }}>
                     <option value="">--Please choose an option--</option>
                     <option value="Maruti WagonR">Maruti WagonR</option>
                     <option value="Hyundai i20">Hyundai i20</option>

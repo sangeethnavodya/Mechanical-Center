@@ -8,12 +8,12 @@ function AdminHomeNew() {
         <div>
             <Navbar/>
             <Space direction='horizontal' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '60px', marginTop: '50px' }}>
-                <Card>
+                <Card style={{ width: '430px',backgroundColor:"#8de0d2" }}>
                     <a className='card' href='/adminHomeFuel'>
                         <h3>Create a Fuel Station</h3>
                     </a>
                 </Card>
-                <Card>
+                <Card style={{ width: '430px',backgroundColor:"#8de0d2" }}>
                     <a className='card' href='/shopCount'>
                         <h3>See shop count</h3>
                     </a>

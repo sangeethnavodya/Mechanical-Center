@@ -68,19 +68,21 @@ function UpdatingForm() {
     }
 
     return (
-        <form className='main'>
+        <form className='main-current-loc' style={{
+            marginTop:"120px"
+        }}>
             <div className='topic'>
                 <h3 className='fuel-add-home-update'>Fuel Station Adding Form</h3>
             </div>
             <div>
-                <label>Fuel Station Name</label>
+                <label style={{color:"white"}}>Fuel Station Name</label>
                 <input type="text" name='Name' onChange={handleNameInputChange} value={nameValue} />
             </div>
             <div>
-                <label>Company Name</label>
+                <label style={{color:"white"}}>Company Name</label>
                 <input type="text" name='CompanyName' onChange={handleCompanyNameInputChange} value={companyNameValue} />
             </div>
-            <label htmlFor="dropdown">Province</label>
+            <label htmlFor="dropdown" style={{color:"white"}}>Province</label>
             <select id="dropdown" value={selectedOption} onChange={handleDropdownChange}>
                 <option value="">--Please choose an option--</option>
                 <option value="Western Province">Western Province</option>

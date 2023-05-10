@@ -302,15 +302,16 @@ function BatterComparision() {
     }
 
     return (
-        <div >
+        <div style={{marginRight:"30px"}}>
 
-            <select id="dropdown-value-battery" value={selectedOption} onChange={handleDropdownChange}>
+            <select id="dropdown-value-battery" value={selectedOption} onChange={handleDropdownChange} style={{marginLeft:"30px",}}>
                 {BatterNames.map((option, index) => (
                     <option key={index} value={option}>
                         {option}
                     </option>
                 ))}
             </select>
+            
             {pic1 &&
                 <card className='battery-compare-card'>
                     <img

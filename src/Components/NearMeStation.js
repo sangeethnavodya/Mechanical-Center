@@ -33,7 +33,7 @@ function NearMeStation() {
         </tr>
     ));
     return (
-        <div className="table-div-near-me">
+        <div className="bg-image">
             <table className="table-near-me">
                 <thead className="table-head-me">
                     <tr className="table-row-me">

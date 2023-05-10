@@ -34,7 +34,7 @@ function NearmeGarage() {
     ));
 
     return (
-        <div className="table-div-near-me">
+        <div className="bg-image">
             <h1 className="shop-near-me-head">Services Near You</h1>
             <table className="table-near-me">
                 <thead className="table-head-me">
