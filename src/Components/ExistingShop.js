@@ -9,6 +9,7 @@ const ShopList = (Prop) => {
   const [shops, setShops] = useState([]);
   const [updateAvailable,setUpdateAvailable]=useState(false);
   const navigate = useNavigate();
+  const [selectedShop,setSelectedSHop]=useState(null)
   console.log(Prop)
   useEffect(() => {
     // Fetch shop data from API on component mount
@@ -61,8 +62,9 @@ const ShopList = (Prop) => {
         // Handle error response
       });
   }
-  function handleOnclickUpdate(){
+  function handleOnclickUpdate(e){
      setUpdateAvailable(true);
+     setSelectedSHop(e)
   }
 
   const tableRows = shops.map((row, index) => (
@@ -76,7 +78,7 @@ const ShopList = (Prop) => {
       <td className='table-shop-td' style={{width:"150px"}}><button className='button-shop' onClick={() => handleOnclickShop(row)}>Show shop</button></td>
       <td className='table-shop-td' style={{width:"150px"}}><button className='button-shop' onClick={() => handleOnclickDelete(row)}>Delete</button></td>
       {!updateAvailable&&<td className='table-shop-td'><button className='button-shop' onClick={() => handleOnclickUpdate(row)}>Update</button></td>}
-      {updateAvailable&&<UShop data={row}/>}
+      {updateAvailable&&selectedShop===row&&<UShop data={row}/>}
     </tr>
       
     
