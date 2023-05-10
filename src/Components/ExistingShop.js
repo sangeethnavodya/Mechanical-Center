@@ -66,6 +66,7 @@ const ShopList = (Prop) => {
      setUpdateAvailable(true);
      setSelectedSHop(e)
   }
+   
 
   const tableRows = shops.map((row, index) => (
   
