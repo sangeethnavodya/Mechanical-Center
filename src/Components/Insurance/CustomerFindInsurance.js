@@ -330,8 +330,8 @@ function CustomerFindInsurance() {
         <div>
             <div id="pdftag">
                 <div className="div-main-customer-find-insurance">
-                    <h1 className="find-insurance-head">
-                        Customer Registration Form
+                    <h1 className="find-insurance-head" style={{fontFamily:"sans-serif"}}>
+                        Discover the perfect insurance companies that meets all your insurance needs
                     </h1>
                     <form >
                         <label htmlFor="dropdown" className='labelHead-form-insuranceCutomer'>Vehicle Type</label>

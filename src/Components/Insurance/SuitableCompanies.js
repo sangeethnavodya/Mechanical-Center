@@ -33,10 +33,13 @@ function SuitableCompanies(props) {
     return (
         <div id='shop-main-div-vb'>
             <div style={{
-               marginLeft:"40%",
-               fontFamily:"fantasy"
+               fontFamily:"fantasy",
+               backgroundColor:"ActiveBorder",
+               display:"flex",
+               justifyContent:"center",
+               alignItems:"center"
             }}>
-                <h1 >Available Companies</h1>
+                <h1 style={{color:"white"}}>Tailored results for your needs</h1>
             </div>
 
             <>

@@ -42,14 +42,14 @@ function ExisitngCustomerReview() {
     }
 
     const cardViews = review?.map((review, index) => (
-        <Space className="card-review" key={index} direction="horizontal">
-            <Card className="card-container-review" style={{ width: "600px" }}>
-                <Space direction="vertical" >
-                    <div className="name-review">
-                        <h4 className="item-desc-review-name">{review.Customer_Name}</h4>
-                        <h5 className="item-desc-review">{review.Review}</h5>
+        <Space key={index} direction="horizontal" style={{ marginleft: "20px" }}>
+            <Card style={{ width: "400px", height: "content", minHeight: "350px", marginLeft: "20px", marginTop: "20px" }}>
+                <Space direction="vertical" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
+                    <div >
+                        <h4 style={{ fontSize: "20px", color: "violet" }}>{review.Customer_Name}</h4>
+                        <h5 style={{ fontSize: "15px" }}>{review.Review}</h5>
                     </div>
-                    <div style={{ marginLeft: "170px" }}>
+                    <div style={{}}>
                         {(review.star == 1) && <div>
                             <img
                                 src={j}
@@ -166,10 +166,9 @@ function ExisitngCustomerReview() {
 
                 </Space>
                 <Space>
-                {update && review.Customer_Name == localStorage.getItem('customer_name') && selectedService === review && <UpdateView data={review} onUpdate={handleReviewUpdate} style={{marginLeft:"20px"}} />}
-            </Space>
+                    {update && review.Customer_Name == localStorage.getItem('customer_name') && selectedService === review && <UpdateView data={review} onUpdate={handleReviewUpdate} style={{ marginLeft: "20px" }} />}
+                </Space>
             </Card>
-        
 
         </Space>
     ));
@@ -185,9 +184,15 @@ function ExisitngCustomerReview() {
     return (
         <div>
             {isReview ? (
-                <div className="item-review">
-                    {cardViews}
+                <div>
+                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center",color:'#1EB4B9' }}>
+                        <h1 style={{ fontFamily: "sans-serif" }}>What customers says about us</h1>
+                    </div>
+                    <div className="item-review">
+                        {cardViews}
+                    </div>
                 </div>
+
             ) : (
                 noReviews
             )}
