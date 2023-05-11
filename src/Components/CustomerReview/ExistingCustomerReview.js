@@ -77,7 +77,13 @@ function ExisitngCustomerReview() {
                                 src={j}
                                 width="30px"
                                 height="30px"
+                            />
+                            <img
+                                src={j}
+                                width="30px"
+                                height="30px"
                             /></div>}
+
                         {(review.star == 4) && <div>
                             <img
                                 src={j}
